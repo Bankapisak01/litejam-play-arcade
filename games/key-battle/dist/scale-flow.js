@@ -212,7 +212,7 @@
     }
     if (performance.now() > messageUntil && session.acceptingInput) {
       if (!session.target.startsWith(session.buffer)) hint('Wrong key · Backspace, then retype', true, 100);
-      else hint(session.timed ? 'Type each note as its beat lands · s or # = sharp' : 'Type the note names in order · s or # = sharp', false, 100);
+      else hint(session.timed ? 'Type each note as its beat lands · → = sharp ♯ · ← = flat ♭' : 'Type the note names in order · → = sharp ♯ · ← = flat ♭', false, 100);
     }
   }
   function prepare() {
@@ -224,7 +224,7 @@
     $('#session-summary').textContent = summaryText();
     $('#start-description').textContent = config.mode === 'battle' ? `Count-in 4 beats → one note per beat → ${rounds.length > 1 ? `${rounds.length} rounds change the pattern and the tempo (${tempoRange()})` : 'bring Synth Drake down by the last note'}` : 'Type each note name in order · every note is a shot at Synth Drake';
     $('#start-note').textContent = config.mode === 'battle' ? 'Late or wrong −1 ♥ · Root note −2 ♥ · Score 0–100,000' : 'No hearts lost · typos only break your streak';
-    $('#typing-hint').textContent = 'Letters a–g · S or # for a sharp · Backspace to correct'; $('#typing-hint').classList.remove('error-hint');
+    $('#typing-hint').textContent = 'Letters a–g · → for a sharp (G# = G →) · ← for a flat (A♭ = A ←) · Backspace to correct'; $('#typing-hint').classList.remove('error-hint');
     input.placeholder = 'Start a session, then type the notes…';
     for (const b of document.querySelectorAll('[data-mode]')) { const on = b.dataset.mode === config.mode; b.classList.toggle('selected', on); b.setAttribute('aria-pressed', on); }
     for (const b of document.querySelectorAll('[data-position]')) { const on = b.dataset.position === config.position; b.classList.toggle('selected', on); b.setAttribute('aria-pressed', on); }
@@ -285,10 +285,10 @@
     if (e.isComposing || e.ctrlKey || e.metaKey || e.altKey) return;
     if (e.key === 'Escape') return;
     if (!session.acceptingInput) { if (e.key.length === 1 || e.key === 'Backspace') { e.preventDefault(); if (session.status === 'playing' && session.timed && !session.isComplete) hint(session.countingIn ? 'Wait for the count-in · first note lands on beat 5' : 'Too early · the window opens just before each beat', false, 600); } return; }
-    if (e.key === 'Backspace' || e.key === ' ' || /^[a-gsA-GS#]$/.test(e.key)) {
+    if (e.key === 'Backspace' || e.key === ' ' || e.key === 'ArrowRight' || e.key === 'ArrowLeft' || /^[a-gsA-GS#]$/.test(e.key)) {
       e.preventDefault(); if (e.repeat && e.key !== 'Backspace') return;
       session.input(e.key); processEvents(); drawWords(); hud();
-    } else if (e.key.length === 1) { e.preventDefault(); hint('Note names only: a b c d e f g · s or # for sharp', true); }
+    } else if (e.key.length === 1) { e.preventDefault(); hint('Note names only: a b c d e f g · → for sharp · ← for flat', true); }
   });
   input.addEventListener('paste', e => e.preventDefault()); input.addEventListener('drop', e => e.preventDefault());
   input.addEventListener('input', e => {

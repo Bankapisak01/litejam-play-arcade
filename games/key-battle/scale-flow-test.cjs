@@ -78,4 +78,23 @@ test('strum(): the right string completes the note, the wrong string is a wrong-
  advance(s,(s.dueMs(1)-s.clock)/1000);const wrong=s.current.string===6?5:6;s.strum(wrong);assert.equal(s.judgements[1].grade,'miss');assert.equal(s.judgements[1].wrongNote,true);assert.equal(s.hp,4);
  assert.equal(s.strum(s.current.string),false); // window of note 3 not open yet
 });
+test('sharps: the right arrow is the sharp key and the left arrow types the flat spelling (G# = G → or A ←)',()=>{
+ const {flatFor,spellingsFor,FLAT}=require('./dist/scale-flow-engine.js');
+ assert.equal(flatFor('G#'),'a'+FLAT);assert.equal(flatFor('A#'),'b'+FLAT);assert.equal(flatFor('C'),'');assert.deepEqual(spellingsFor('F#'),['f#','g'+FLAT]);assert.deepEqual(spellingsFor('E'),['e']);
+ const s=make({root:'G#',type:'major',routine:'single'});assert.equal(s.current.label,'G#');assert.deepEqual(s.spellings,['g#','a'+FLAT]);
+ advance(s,s.dueMs(0)/1000+.001);
+ assert.equal(s.input('g'),true);assert.equal(s.buffer,'g');assert.equal(s.target,'g#');
+ assert.equal(s.input('ArrowRight'),true);assert.equal(s.cursor,1);assert.equal(s.judgements[0].grade,'perfect');assert.equal(s.wrongAttempts,0);
+ // Next sharp in G# major: type it as a flat, letter above then ← .
+ while(s.current&&!s.current.label.endsWith('#')){advance(s,(s.dueMs(s.cursor)-s.clock)/1000+.001);typeNote(s);}
+ const sharp=s.current,flat=flatFor(sharp.label);advance(s,(s.dueMs(s.cursor)-s.clock)/1000+.001);
+ assert.equal(s.input(flat[0]),true);assert.equal(s.buffer,flat[0]);assert.equal(s.target,flat,'the flat spelling becomes the target once its letter is typed');
+ const at=s.cursor;assert.equal(s.input('ArrowLeft'),true);assert.equal(s.cursor,at+1);assert.equal(s.buffer,'');assert.equal(s.wrongAttempts,0);assert.equal(s.judgements.at(-1).grade,'perfect');assert.equal(s.judgements.at(-1).index,at);assert.equal(s.steps[at],sharp);
+ // An arrow before a letter, a flat on a natural note, or a letter that spells neither name, is still a wrong key.
+ const nat=make({root:'C',type:'major',routine:'single'});advance(nat,nat.dueMs(0)/1000+.001);assert.equal(nat.target,'c');
+ assert.equal(nat.input('ArrowLeft'),true);assert.equal(nat.wrongAttempts,1);assert.equal(nat.cursor,0);nat.input('Backspace');
+ assert.equal(nat.input('d'),true);assert.equal(nat.wrongAttempts,2);assert.equal(nat.cursor,0);nat.input('Backspace');
+ assert.equal(nat.input('ArrowUp'),false,'other arrows are not note keys');assert.equal(nat.wrongAttempts,2);
+ assert.equal(nat.input('c'),true);assert.equal(nat.cursor,1,'the natural completes on its letter alone');
+});
 console.log(`\n${passed} passed, ${failed} failed`);process.exitCode=failed?1:0;

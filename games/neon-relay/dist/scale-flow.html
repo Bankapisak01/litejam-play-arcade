@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="/shared/arcade-shell.css">
   <link rel="stylesheet" href="/shared/play-shell.css">
-  <link rel="stylesheet" href="scale-flow.css?v=run2">
+  <link rel="stylesheet" href="scale-flow.css?v=run5">
   <script src="/shared/arcade-shell.js" defer></script>
 </head>
 <body class="play-page neon-play scale-run-page">
@@ -28,7 +28,8 @@
         <div class="notification" id="notification" role="status" aria-live="polite"></div>
       </div>
       <div class="game-bottom"><span><span class="cyan-dot"></span><span id="status">Ready to run</span></span><span class="quick-hint">W S <span>HOP STRING</span><b>·</b> J X SPACE <span>STRUM</span><b>·</b> ESC <span>MENU</span></span></div>
-      <div class="touch-controls" aria-label="Touch controls"><div><button data-action="up" aria-label="Hop to a higher string">↑</button><button data-action="down" aria-label="Hop to a lower string">↓</button></div><div><button data-action="strum" class="shoot-touch" aria-label="Strum the note">STRUM</button></div></div>
+      <div id="key-guide" class="key-guide" aria-label="Keys"><span class="key-guide-title">KEY GUIDE</span><span><kbd>A</kbd>–<kbd>G</kbd> note <em>one press plays it</em></span><span><kbd>→</kbd> sharp ♯ <em>G# = G →</em></span><span><kbd>←</kbd> flat ♭ <em>A♭ = A ←</em></span><span><kbd>⌫</kbd> fix</span><span class="rails-only" hidden><kbd>W</kbd><kbd>S</kbd> hop string</span><span class="rails-only" hidden><kbd>J</kbd><kbd>X</kbd><kbd>SPACE</kbd> strum</span><span class="key-guide-ultimate"><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd><kbd>4</kbd> ultimate <em>OVERDRIVE 100% · string 1, frets 1–4</em></span></div>
+      <div class="touch-controls" aria-label="Touch controls"><div><button data-action="up" aria-label="Hop to a higher string">↑</button><button data-action="down" aria-label="Hop to a lower string">↓</button></div><div><button data-action="ultimate" class="ultimate-touch" aria-label="Ultimate: play frets 1 2 3 4 on string 1">1·2·3·4</button><button data-action="strum" class="shoot-touch" aria-label="Strum the note">STRUM</button></div></div>
       <p class="rotate-hint">Turn your phone sideways for a wider view.</p>
       <dialog class="play-menu" id="pause-menu" aria-labelledby="menu-title" aria-describedby="menu-description">
         <div class="play-menu-top"><div><p class="play-kicker">NEON RELAY × SCALE FLOW / SESSION</p><h2 id="menu-title">Scale setup</h2><p class="play-menu-description" id="menu-description">Pick a scale like the app's Scale flow tab, then run it: one note per beat, string by string.</p></div><button id="menu-close" class="play-menu-close" aria-label="Close menu">×</button></div>
@@ -44,10 +45,11 @@
             <p id="settings-note" class="menu-note" hidden>End this session to change the scale or tempo.</p>
             <div class="record"><span>YOUR BEST</span><strong id="best">—</strong><span id="best-detail">Set your first personal best for this scale</span></div>
           </section>
-          <section class="play-menu-section"><h3>Take control</h3><dl class="play-control-list"><div><dt>Type the note</dt><dd><kbd>A</kbd>–<kbd>G</kbd> · <kbd>S</kbd> / <kbd>#</kbd> sharp · <kbd>⌫</kbd></dd></div><div><dt>Hop up a string</dt><dd><kbd>W</kbd> / <kbd>↑</kbd></dd></div><div><dt>Hop down a string</dt><dd><kbd>S</kbd> / <kbd>↓</kbd></dd></div><div><dt>Strum the note</dt><dd><kbd>J</kbd> / <kbd>X</kbd> / <kbd>SPACE</kbd></dd></div><div><dt>Pause / resume</dt><dd><kbd>P</kbd> / <kbd>ESC</kbd></dd></div></dl>
+          <section class="play-menu-section"><h3>Take control</h3><dl class="play-control-list"><div><dt>Play the note (one press)</dt><dd><kbd>A</kbd>–<kbd>G</kbd> · <kbd>⌫</kbd></dd></div><div><dt>Sharp ♯ (G# = G →)</dt><dd><kbd>→</kbd></dd></div><div><dt>Flat ♭ (A♭ = A ←)</dt><dd><kbd>←</kbd></dd></div><div><dt>Ultimate · OVERDRIVE 100%</dt><dd><kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> <kbd>4</kbd></dd></div><div><dt>Hop up a string</dt><dd><kbd>W</kbd> / <kbd>↑</kbd></dd></div><div><dt>Hop down a string</dt><dd><kbd>S</kbd> / <kbd>↓</kbd></dd></div><div><dt>Strum the note</dt><dd><kbd>J</kbd> / <kbd>X</kbd> / <kbd>SPACE</kbd></dd></div><div><dt>Pause / resume</dt><dd><kbd>P</kbd> / <kbd>ESC</kbd></dd></div></dl>
             <p class="menu-note" id="start-description">Count-in 4 beats → hop to the note's string → strum as the LED reaches Punkman. 3 rounds change the pattern and the tempo (80→100 BPM).</p>
             <p class="menu-note">PERFECT ±90 ms · GREAT ±160 ms · GOOD ±240 ms. Late, early or the wrong string −1 ♥ · a root note (pink LED) −2 ♥ · a round with no miss heals +1 ♥.</p>
-            <h3 class="mission-heading">Make it yours</h3><div class="preferences-row"><button id="sound" class="menu-setting" aria-pressed="true">Sound: On</button><button id="guide" class="menu-setting" aria-pressed="true">Note guide: On</button><button id="motion" class="menu-setting" aria-pressed="true">Effects: On</button><button id="auto" class="menu-setting" aria-pressed="false">Auto run: Off</button><button id="keys" class="menu-setting" aria-pressed="true">Keys: Note names</button></div><p class="menu-note">Note guide plays each note at its real pitch on its beat, so you hear the scale while you run it. Auto run lets Punkman play the scale himself so you can watch every effect; auto runs are not saved. Keys switches between typing the note names (A–G, S or # for a sharp) and hopping strings with W/S then strumming with J, X or Space.</p>
+            <p class="menu-note">Ultimate: every hit fills OVERDRIVE. At 100% play the chromatic run on string 1 — frets 1 2 3 4, keys <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> <kbd>4</kbd> in order — and RGB Overdrive hits Synth Drake for −20. A wrong fret restarts the run; the meter keeps its charge.</p>
+            <h3 class="mission-heading">Make it yours</h3><div class="preferences-row"><button id="sound" class="menu-setting" aria-pressed="true">Sound: On</button><button id="guide" class="menu-setting" aria-pressed="true">Note guide: On</button><button id="motion" class="menu-setting" aria-pressed="true">Effects: On</button><button id="auto" class="menu-setting" aria-pressed="false">Auto run: Off</button><button id="keys" class="menu-setting" aria-pressed="true">Keys: Note names</button></div><p class="menu-note">Note guide plays each note at its real pitch on its beat, so you hear the scale while you run it. Auto run lets Punkman play the scale himself so you can watch every effect; auto runs are not saved. Pressing a note name once plays it in every mode (A–G, then → for a sharp or ← for a flat: G# is G → or A ←) — no Space needed. Keys: Notes + strings also lets you hop strings with W/S and strum with J, X or Space, guitar style.</p>
           </section>
         </div>
         <div class="play-menu-actions"><button class="primary" id="menu-start" disabled>Loading characters…</button><button class="primary" id="menu-resume" hidden>Resume run →</button><button class="secondary" id="finish" disabled hidden>End session &amp; review</button><a class="menu-arcade-link" href="index.html">Back to Neon Relay ↗</a></div>
@@ -62,6 +64,6 @@
       </dialog>
     </section>
   </main>
-  <script src="vfx.js"></script><script src="boss.js"></script><script src="scale-flow-data.js?v=run2"></script><script src="scale-flow-engine.js?v=run2"></script><script src="scale-run-rules.js?v=run2"></script><script src="scale-flow.js?v=run2"></script>
+  <script src="vfx.js"></script><script src="boss.js"></script><script src="scale-flow-data.js?v=run5"></script><script src="scale-flow-engine.js?v=run5"></script><script src="scale-run-rules.js?v=run5"></script><script src="scale-flow.js?v=run5"></script>
 </body>
 </html>

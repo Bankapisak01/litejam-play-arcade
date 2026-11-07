@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css?v=immersive1">
   <link rel="stylesheet" href="/shared/arcade-shell.css">
   <link rel="stylesheet" href="/shared/play-shell.css">
-  <link rel="stylesheet" href="scale-flow.css?v=flow3">
+  <link rel="stylesheet" href="scale-flow.css?v=flow4">
   <script src="/shared/arcade-shell.js" defer></script>
 </head>
 <body class="play-page key-battle-page scale-flow-page">
@@ -39,10 +39,10 @@
             <div class="flow-side">
               <div id="word-stream" class="word-stream note-stream" aria-hidden="true"><span class="current-word">c</span><span class="upcoming">d</span></div>
               <div class="beat-meter"><div class="word-risk-line"><span id="word-risk">Count-in · 4 beats</span><strong id="word-clock">Beat</strong></div><div class="word-time-track"><i id="word-time-fill"></i></div></div>
-              <label for="typing-input">TYPE HERE <span>A–G · S OR # FOR SHARP</span></label>
+              <label for="typing-input">TYPE HERE <span>A–G · → SHARP ♯ · ← FLAT ♭</span></label>
               <input id="typing-input" type="text" inputmode="text" enterkeyhint="next" lang="en" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" disabled placeholder="Start a session, then type the notes…" aria-describedby="typing-hint target-accessible" maxlength="4">
               <span id="target-accessible" class="sr-only" aria-live="polite">Next note</span>
-              <div class="typing-footer"><span id="typing-hint">Letters a–g · S or # for a sharp · Backspace to correct</span></div>
+              <div class="typing-footer"><span id="typing-hint">Letters a–g · → for a sharp (G# = G →) · ← for a flat (A♭ = A ←) · Backspace to correct</span></div>
             </div>
           </div>
         </div>
@@ -73,6 +73,6 @@
     <div class="play-menu-actions"><button id="menu-start" class="primary" disabled>Loading characters…</button><button id="resume" class="primary" hidden>Resume flow →</button><button id="finish" class="secondary" disabled hidden>End session &amp; review</button><a href="index.html">Back to Key Battle</a></div>
   </dialog>
   <dialog id="results" aria-labelledby="result-title"><div class="result-body"><span class="overline" id="result-kicker">FLOW COMPLETE</span><h2 id="result-title">In the flow.</h2><p id="result-description"></p><div class="result-metrics"><div><strong id="result-score">0</strong><span>SCORE</span></div><div><strong id="result-timing">—</strong><span>TIMING</span></div><div><strong id="result-streak">0</strong><span>BEST STREAK</span></div></div><div class="grade-row" id="grade-row"></div><div class="result-details" id="result-details"></div><div class="round-list" id="round-list" hidden></div><div class="review"><span>XP &amp; NEXT PRACTICE</span><p id="result-review"></p></div><div class="result-actions"><button id="again" class="primary">Play again →</button><button id="change-session" class="secondary">Change scale / tempo</button></div></div></dialog>
-  <script src="scale-flow-data.js?v=flow3"></script><script src="scale-flow-engine.js?v=flow3"></script><script src="vfx.js?v=rounds2"></script><script src="scene.js?v=rounds2"></script><script src="scale-flow.js?v=flow3"></script>
+  <script src="scale-flow-data.js?v=flow4"></script><script src="scale-flow-engine.js?v=flow4"></script><script src="vfx.js?v=rounds2"></script><script src="scene.js?v=rounds2"></script><script src="scale-flow.js?v=flow4"></script>
 </body>
 </html>

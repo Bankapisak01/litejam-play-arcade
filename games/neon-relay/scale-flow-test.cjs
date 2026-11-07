@@ -35,4 +35,31 @@ test('free flow: strum any time, the pace timer only breaks the streak',()=>{
  const s=make({mode:'practice',routine:'single'});assert.equal(s.strum(s.current.string),true);assert.equal(s.streak,1);
  advance(s,RULES.paceMs/1000+.05);assert.equal(s.streak,0);assert.equal(s.hp,5);assert.equal(s.strum(s.current.string),true);assert.equal(s.judgements[1].grade,'good');
 });
+/** Strum every note on its beat until the meter is full (or the run ends). */
+const fillOverdrive=s=>{while(s.status==='playing'&&s.current&&s.charge<100){const due=s.dueMs(s.cursor);if(s.clock<due)advance(s,(due-s.clock)/1000+.001);s.strum(s.current.string);}};
+test('finisher: OVERDRIVE 100% waits in combo mode, then 1 2 3 4 (string 1, frets 1-4) unleashes RGB Overdrive for 20',()=>{
+ const s=make({routine:'set',ultimate:'combo'});assert.deepEqual(s.comboKeys,['1','2','3','4']);assert.equal(s.ultimateReady,false);
+ assert.equal(s.ultimateKey('1'),true);assert.equal(s.drain().find(e=>e.type==='ultimateLocked').charge,0); // locked while the meter is empty
+ fillOverdrive(s);assert.equal(s.charge,100);assert.equal(s.ultimateReady,true);assert.equal(s.ultimates,0,'no auto-fire in combo mode');
+ const hp=s.bossHp;s.drain();
+ for(const k of['1','2','3'])assert.equal(s.ultimateKey(k),true);
+ const steps=s.drain().filter(e=>e.type==='ultimateStep');assert.deepEqual(steps.map(e=>[e.step,e.fret,e.string]),[[1,1,1],[2,2,1],[3,3,1]]);assert.equal(s.comboStep,3);
+ assert.equal(s.ultimateKey('4'),true);const ev=s.drain();
+ assert.equal(ev.find(e=>e.type==='ultimate').damage,RULES.ultimateDamage);assert.equal(ev.find(e=>e.type==='attack').kind,'ultimate');
+ near(s.bossHp,hp-20);assert.equal(s.ultimates,1);assert.equal(s.charge,0);assert.equal(s.comboStep,0);assert.equal(s.ultimateReady,false);
+ assert.equal(s.ultimateKey('5'),false,'other digits are not finisher keys');assert.equal(s.ultimateKey('x'),false);
+});
+test('finisher: a wrong fret restarts the run, a 2.5 s pause resets it, and the meter keeps its charge',()=>{
+ const s=make({routine:'set',ultimate:'combo'});fillOverdrive(s);s.drain();
+ s.ultimateKey('1');s.ultimateKey('3');assert.equal(s.comboStep,0);assert.equal(s.drain().find(e=>e.type==='ultimateBreak').key,'3');
+ s.ultimateKey('2');s.ultimateKey('1');assert.equal(s.comboStep,1,'a stray 1 starts the run again');
+ s.ultimateKey('2');s.drain();advance(s,RULES.ultimateComboMs/1000+.1);assert.equal(s.comboStep,0);assert.equal(s.drain().find(e=>e.type==='ultimateBreak').timeout,true);
+ assert.equal(s.charge,100);assert.equal(s.ultimates,0);
+ for(const k of['1','2','3','4'])s.ultimateKey(k);assert.equal(s.ultimates,1);
+});
+test('auto mode (other demos) still fires the full meter on the next note',()=>{
+ const s=make({routine:'set'});assert.equal(s.ultimateMode,'auto');assert.equal(s.ultimateKey('1'),false);
+ while(s.status==='playing'&&s.current&&s.ultimates===0){const due=s.dueMs(s.cursor);if(s.clock<due)advance(s,(due-s.clock)/1000+.001);s.strum(s.current.string);}
+ assert.equal(s.ultimates,1);assert.equal(s.charge,0,'the meter emptied on the note that filled it');assert.equal(s.drain().filter(e=>e.type==='attack').at(-1).kind,'ultimate');
+});
 console.log(`\n${passed} passed, ${failed} failed`);process.exitCode=failed?1:0;

@@ -5,14 +5,14 @@
   const canvas = document.querySelector('#game'), ctx = canvas.getContext('2d');
   const $ = s => document.querySelector(s), W = 480, H = 270;
   canvas.width = W * 2; canvas.height = H * 2; ctx.setTransform(2, 0, 0, 2, 0, 0); ctx.imageSmoothingEnabled = false;
-  const { Session, RULES, ROUTINES, NOTE_NAMES, DATA, xpFor } = window.ScaleFlow;
+  const { Session, RULES, ROUTINES, NOTE_NAMES, DATA, xpFor, flatFor } = window.ScaleFlow;
   const R = window.ScaleRunRules, fx = window.PunkmanFX, bossArt = window.PunkmanBoss;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const color = { pink: '#ff4ca4', cyan: '#80f4df', white: '#f6e8ec', lime: '#d5ff62', gold: '#ffd18a', blue: '#4fc3ff', root: '#ff5a86', dim: '#bba9c6' };
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
   const config = { mode: 'battle', root: 'C', type: 'major', position: 'r5', octave: 'full', routine: RULES.defaultRoutine, bpm: RULES.defaultBpm };
   const menu = $('#pause-menu');
-  let session, player, boss, loaded = false, failed = false, sound = true, guide = true, auto = false, autoHopT = 0, autoStrumAt = 0, inputMode = 'notes', motion = !reduced, audio, pageActive = true, menuOpen = false;
+  let session, player, boss, loaded = false, failed = false, sound = true, guide = true, auto = false, autoHopT = 0, autoStrumAt = 0, autoComboAt = 0, inputMode = 'notes', motion = !reduced, audio, pageActive = true, menuOpen = false;
   let last = performance.now(), time = 0, scroll = 0, shake = 0, callout = null, flashes = [], particles = [], shots = [], finishAt = 0, resultShown = false, records = {}, healedFlag = false, noteTimer = 0, strumKind = 0;
   try { const data = JSON.parse(localStorage.getItem('punkman-scale-run-records') || '{}'); if (data && typeof data === 'object' && !Array.isArray(data)) records = data; } catch {}
   const title = () => `${config.root} ${DATA.titles[config.type]}`;
@@ -67,7 +67,7 @@
 
   // ---------- Session lifecycle ----------
   function prepare() {
-    session = new Session({ ...config }); resultShown = false; finishAt = 0; flashes = []; particles = []; shots = []; callout = null; time = 0; scroll = 0; shake = 0; healedFlag = false;
+    session = new Session({ ...config, ultimate: 'combo' }); resultShown = false; finishAt = 0; flashes = []; particles = []; shots = []; callout = null; time = 0; scroll = 0; shake = 0; healedFlag = false;
     const first = session.steps[0]; player = { string: first ? first.string : 5, fromY: 0, hopT: 0, strumT: 0, face: 1, w: 14, h: 30 }; player.y = R.railY(player.string) - player.h; player.fromY = player.y;
     boss = bossArt.create(); boss.x = 392; boss.y = 156; boss.face = -1; boss.active = true; boss.state = 'idle';
     $('#results').close();
@@ -134,7 +134,7 @@
     const ok = session.strum(player.string); processEvents();
     if (!ok) { if (session.timed) notify(session.countingIn ? 'Wait for the count-in · the first note lands on beat 5' : 'Too early · strum as the LED reaches Punkman'); tone(220, .05, .012, 180, 'square'); }
   }
-  /** Note-name input: type the note (a–g, s or # for a sharp, Backspace to correct). Punkman hops to the string and strums on the hit. */
+  /** Note-name input: type the note (a–g, → for a sharp, ← for a flat, Backspace to correct). Punkman hops to the string and strums on the hit. */
   function typeNote(key) {
     if (session.status !== 'playing' || menuOpen || !session.current) return;
     if (!session.acceptingInput) { if (session.timed && !session.isComplete) notify(session.countingIn ? 'Wait for the count-in · the first note lands on beat 5' : 'Too early · type the note as its LED reaches Punkman'); tone(220, .05, .012, 180, 'square'); return; }
@@ -143,11 +143,17 @@
     while (session.buffer && session.acceptingInput && !session.target.startsWith(session.buffer)) session.input('Backspace');
     processEvents();
   }
+  /** The finisher: keys 1 2 3 4 (string 1, frets 1–4 on a guitar controller) unleash RGB Overdrive once the meter is full. */
+  function ultimateKey(key) {
+    if (session.status !== 'playing' || menuOpen) return;
+    if (session.ultimateKey(key)) processEvents();
+  }
   function inputUI() {
     const notes = inputMode === 'notes';
-    $('#keys').textContent = 'Keys: ' + (notes ? 'Note names' : 'Strings + strum'); $('#keys').setAttribute('aria-pressed', notes);
-    $('.quick-hint').innerHTML = notes ? 'A–G <span>TYPE THE NOTE</span><b>·</b> S # <span>SHARP</span><b>·</b> ESC <span>MENU</span>' : 'W S <span>HOP STRING</span><b>·</b> J X SPACE <span>STRUM</span><b>·</b> ESC <span>MENU</span>';
-    $('#start-hint').textContent = notes ? 'Type the note name A–G · S or # for a sharp · ENTER to start · Auto run in Menu' : 'W S hop · J X SPACE strum · ENTER to start · Auto run in Menu';
+    for (const el of document.querySelectorAll('#key-guide .rails-only')) el.hidden = notes;
+    $('#keys').textContent = 'Keys: ' + (notes ? 'Note names' : 'Notes + strings'); $('#keys').setAttribute('aria-pressed', notes);
+    $('.quick-hint').innerHTML = notes ? 'A–G <span>PRESS THE NOTE</span><b>·</b> → <span>SHARP ♯</span><b>·</b> ← <span>FLAT ♭</span><b>·</b> 1 2 3 4 <span>ULTIMATE</span><b>·</b> ESC <span>MENU</span>' : 'A–G <span>PRESS THE NOTE</span><b>·</b> W S <span>HOP</span><b>·</b> J X SPACE <span>STRUM</span><b>·</b> 1 2 3 4 <span>ULTIMATE</span><b>·</b> ESC <span>MENU</span>';
+    $('#start-hint').textContent = notes ? 'Press the note once: A–G · → for a sharp (G# = G →) · ← for a flat (A♭ = A ←) · no Space needed · OVERDRIVE 100%: play 1 2 3 4 · ENTER to start' : 'Press the note once (A–G), or hop with W S and strum with J X SPACE · OVERDRIVE 100%: play 1 2 3 4 · ENTER to start';
   }
   window.addEventListener('keydown', e => {
     if (!pageActive || e.ctrlKey || e.metaKey || e.altKey) return;
@@ -158,16 +164,17 @@
     if (e.code === 'KeyP' || e.code === 'Escape') { e.preventDefault(); if (!e.repeat) toggleMenu(); return; }
     if (e.target?.closest?.('a,button')) return;
     if (e.code === 'Enter' && session.status === 'ready') { e.preventDefault(); start(); return; }
-    if (inputMode === 'notes') {
-      if (e.code === 'Backspace' || /^[a-gsA-GS#]$/.test(e.key)) { e.preventDefault(); if (!e.repeat) typeNote(e.key === 'Backspace' ? 'Backspace' : e.key.toLowerCase()); return; }
-      if (e.code === 'ArrowUp' || e.code === 'KeyW') { e.preventDefault(); if (!e.repeat) hop(-1); return; }
-      if (e.code === 'ArrowDown') { e.preventDefault(); if (!e.repeat) hop(1); return; }
-    }
+    // Finisher keys 1–4: a guitar controller sends them as string 1, frets 1 2 3 4 (a chromatic run).
+    const digit = /^[1-4]$/.test(e.key) ? e.key : (/^(?:Digit|Numpad)([1-4])$/.exec(e.code) || [])[1];
+    if (digit) { e.preventDefault(); if (!e.repeat) ultimateKey(digit); return; }
+    // One key plays the note in every mode: A–G (then → ♯ / ← ♭) hops Punkman to the string and strums it — no Space needed.
+    // S is the hop-down key, so the sharp alias is the arrow only. Hop (W S ↑ ↓) and strum (J X Space) stay available for a guitar-style run.
+    if (e.code === 'Backspace' || e.code === 'ArrowRight' || e.code === 'ArrowLeft' || /^[a-gA-G#]$/.test(e.key)) { e.preventDefault(); if (!e.repeat) typeNote(e.code === 'Backspace' || e.code === 'ArrowRight' || e.code === 'ArrowLeft' ? e.code : e.key.toLowerCase()); return; }
     if (e.code in R.hopKeys) { e.preventDefault(); if (!e.repeat) hop(R.hopKeys[e.code]); return; }
     if (R.strumKeys.includes(e.code)) { e.preventDefault(); if (!e.repeat) strum(); }
   });
   for (const button of document.querySelectorAll('[data-action]')) {
-    button.addEventListener('pointerdown', e => { e.preventDefault(); button.classList.add('held'); const a = button.dataset.action; if (a === 'up') hop(-1); else if (a === 'down') hop(1); else strum(); });
+    button.addEventListener('pointerdown', e => { e.preventDefault(); button.classList.add('held'); const a = button.dataset.action; if (a === 'up') hop(-1); else if (a === 'down') hop(1); else if (a === 'ultimate') ultimateKey(session.comboKeys[session.comboStep]); else strum(); });
     for (const ev of ['pointerup', 'pointercancel', 'lostpointercapture']) button.addEventListener(ev, () => button.classList.remove('held'));
   }
   window.addEventListener('blur', () => { if (session.status === 'playing') openMenu(); });
@@ -187,7 +194,7 @@
       if (e.type === 'note' && !session.timed && session.started && guide && session.current) pluck(session.current.midi, .022, .3);
       if (e.type === 'note' && inputMode === 'notes' && !auto && session.started && session.current && player.string !== session.current.string) { player.fromY = player.y; player.string = session.current.string; player.hopT = .18; }
       if (e.type === 'bossWindup' && boss.state !== 'breath' && !boss.dead) { boss.state = 'charge'; boss.clock = 0; boss.attack = 'breath'; }
-      if (e.type === 'mistake') { tone(125, .07, .025, 80); notify(inputMode === 'notes' ? `Wrong key · the note is ${session.current ? session.current.label : ''} · type it again` : 'Wrong string'); }
+      if (e.type === 'mistake') { tone(125, .07, .025, 80); notify(`Wrong key · the note is ${session.current ? session.current.label : ''} · press it once`); }
       if (e.type === 'hit') {
         if (player.string !== e.note.string) { player.fromY = player.y; player.string = e.note.string; player.hopT = .18; }
         if (player.strumT <= 0) { player.strumT = .25; strumKind = (strumKind + 1) % 2; }
@@ -203,6 +210,11 @@
         if (!boss.dead) { boss.state = 'breath'; boss.clock = 0; } shots.push({ key: e.damage === 2 ? 'boss-overdrive' : 'boss-breath', t: 0, life: .5, y: R.railY(player.string) - 14, enemy: true }); shake = motion ? 4 : 0;
       }
       if (e.type === 'late') { say('TOO SLOW · STREAK RESET', '#ff91b5', 1); tone(160, .12, .02, 120); }
+      // Finisher: each fret of the chromatic run rings on string 1; the fourth unleashes RGB Overdrive (the 'attack' above draws the shot).
+      if (e.type === 'ultimateLocked') { tone(220, .05, .012, 180, 'square'); notify(`Fill OVERDRIVE to 100% first (${Math.round(e.charge)}% now) · then play 1 2 3 4 on string 1`); }
+      if (e.type === 'ultimateStep') { pluck(64 + e.fret, .05, .4); flashes.push({ t: time, string: e.string, c: color.gold }); burst(R.PLAYER_X + 10, R.railY(e.string) - 12, color.gold, 6); if (e.step < 4) say(`${session.comboKeys.slice(0, e.step).join(' ')} · ${4 - e.step} TO GO`, color.gold, .6); }
+      if (e.type === 'ultimateBreak') { if (!e.timeout || e.step === 0) { tone(140, .08, .015, 100, 'square'); say('ULTIMATE RESET · PLAY 1 2 3 4', '#ff91b5', .8); } }
+      if (e.type === 'ultimate') { say('RGB OVERDRIVE · 1 2 3 4', '#ffc0e4', 1.4); notify(`RGB Overdrive! Synth Drake takes −${e.damage}`); for (let s = 1; s <= 6; s++) flashes.push({ t: time, string: s, c: color.cyan }); burst(boss.x + 40, boss.y + 40, color.cyan, 24); burst(R.PLAYER_X + 10, R.railY(player.string) - 12, '#ffc0e4', 16); if (player.strumT <= 0) { player.strumT = .25; strumKind = 1; } }
       if (e.type === 'heal') healedFlag = true;
       if (e.type === 'round') { const r = e.round; say(`ROUND ${e.index + 1} · ${r.short} · ${r.bpm} BPM${healedFlag ? ' · +1 ♥' : ''}`, healedFlag ? '#a2ffe4' : color.lime, 1.5); notify(`Round ${e.index + 1}/${session.rounds.length} · ${r.name} at ${r.bpm} BPM · ${r.hint}${healedFlag ? ' · clean round +1 ♥' : ''}`); $('#status').textContent = `Round ${e.index + 1}/${session.rounds.length} · ${r.name} · ${r.bpm} BPM`; tone(healedFlag ? 660 : 520, .25, .04, healedFlag ? 990 : 780); healedFlag = false; }
       if (e.type === 'phase') { boss.phase = 2; say('PHASE II', '#ff82c5', 1.5); notify('Phase 2 · Synth Drake is faltering. Keep the run steady.'); tone(140, .65, .045, 420); }
@@ -219,6 +231,8 @@
   // ---------- Update ----------
   /** Auto run: Punkman hops to the note's string and strums it on the beat (or every .6 s in practice). Nothing is saved. */
   function autopilot(dt) {
+    // Auto run plays the finisher as soon as the meter is full: one fret every .12 s.
+    if (session.ultimateReady) { autoComboAt -= dt; if (autoComboAt <= 0) { ultimateKey(session.comboKeys[session.comboStep]); autoComboAt = .12; } }
     const cur = session.current; if (!cur) return;
     const beatsAway = session.timed ? (session.dueMs(session.cursor) - session.clock) / session.beatMs : 0;
     autoHopT = Math.max(0, autoHopT - dt);
@@ -326,7 +340,7 @@
   function hud() {
     const s = session.stats(), r = session.roundInfo, rn = session.roundIndex + 1;
     rect(8, 7, 118, 25, '#100d1bdd'); label('PUNKMAN', 14, 17, color.white, 7); for (let i = 0; i < session.maxHp; i++) { rect(14 + i * 15, 21, 12, 5, i < session.hp ? color.pink : '#4b324f'); if (i < session.hp) rect(14 + i * 15, 21, 12, 1, '#ffb3d8'); }
-    rect(8, 34, 118, 19, '#100d1bdd'); label('OVERDRIVE ' + Math.round(session.charge) + '%', 14, 42, session.charge >= 88 ? color.cyan : color.dim, 6); rect(14, 46, 106, 3, '#4b324f'); rect(14, 46, 106 * session.charge / 100, 3, session.charge >= 88 ? color.cyan : color.pink);
+    rect(8, 34, 118, 19, '#100d1bdd'); label(session.ultimateReady ? 'OVERDRIVE READY · 1 2 3 4' : 'OVERDRIVE ' + Math.round(session.charge) + '%', 14, 42, session.ultimateReady ? (!motion || Math.floor(time * 3) % 2 ? color.gold : color.cyan) : session.charge >= 88 ? color.cyan : color.dim, 6); rect(14, 46, 106, 3, '#4b324f'); rect(14, 46, 106 * session.charge / 100, 3, session.charge >= 88 ? color.cyan : color.pink);
     rect(134, 7, 206, 25, '#100d1bdd'); label('SCORE', 140, 17, color.dim, 6); label(s.score.toLocaleString(), 170, 17, color.lime, 8); label('TIMING', 232, 17, color.dim, 6); label(s.timingPct == null ? '—' : s.timingPct + '%', 268, 17, color.white, 8); label('NOTES', 140, 28, color.dim, 6); label(`${s.done}/${s.total}`, 170, 28, color.white, 7); label('STREAK', 232, 28, color.dim, 6); label(String(s.streak), 268, 28, color.pink, 7);
     rect(134, 34, 206, 19, '#130d20dd'); label(session.phase === 2 ? 'SYNTH DRAKE II - OVERDRIVE' : 'SYNTH DRAKE I', 140, 42, session.phase === 2 ? color.gold : color.pink, 6); label(Math.round(session.bossHp) + ' / 100', 334, 42, color.dim, 6, 'right'); rect(140, 46, 194, 3, '#493248'); rect(140, 46, 194 * session.bossHp / 100, 3, session.phase === 2 ? '#ff8b60' : color.pink);
     rect(348, 7, 124, 25, '#100d1bdd'); label(session.timed ? 'TIME LEFT' : 'TIME', 354, 17, color.dim, 6); label(session.timed ? mmss(session.started ? session.timeLeftMs : session.totalMs) : mmss(s.elapsed * 1000), 466, 19, color.white, 10, 'right');
@@ -336,11 +350,20 @@
     session.rounds.forEach((rd, i) => { const text = `${String(i + 1).padStart(2, '0')} ${rd.short}${session.timed ? ' · ' + rd.bpm : ''}`, w = ctx.measureText(text).width; const state = session.status === 'finished' || i + 1 < rn ? 'cleared' : i + 1 === rn ? 'current' : 'pending'; label(text, x, 64, state === 'current' ? color.cyan : state === 'cleared' ? '#dbc0ef' : '#7d6a90', 6); x += w + 6; if (i < session.rounds.length - 1) { label('›', x, 64, '#6d517e', 6); x += 8; } });
     if (auto) label('AUTO RUN', 470, 64, color.gold, 6, 'right');
     const cur = session.current;
-    if (cur) label(`NEXT  ${cur.label}  ·  ${R.STRING_NAMES[cur.string]} string ${cur.string}  ·  fret ${cur.fret}  ·  deg ${cur.degree}${cur.isRoot ? '  ·  ROOT' : ''}${session.buffer ? '  ·  TYPED ' + session.buffer.toUpperCase() + '_' : ''}`, 10, 78, cur.isRoot ? color.gold : color.white, 6);
+    const flat = cur ? flatFor(cur.label) : '';
+    if (cur) label(`NEXT  ${cur.label}${flat ? ' / ' + flat.toUpperCase() : ''}  ·  ${R.STRING_NAMES[cur.string]} string ${cur.string}  ·  fret ${cur.fret}  ·  deg ${cur.degree}${cur.isRoot ? '  ·  ROOT' : ''}${session.buffer ? '  ·  TYPED ' + session.buffer.toUpperCase() + '_' : ''}`, 10, 78, cur.isRoot ? color.gold : color.white, 6);
+    // Per-note key guide for sharps: both spellings and the arrow that completes each one.
+    if (cur && flat && !session.buffer) label(`KEYS  ${cur.label[0]} →   or   ${flat[0].toUpperCase()} ←`, 10, 90, color.cyan, 6);
+    // Finisher prompt: the four frets light up as they are played.
+    if (session.ultimateReady && session.status === 'playing') {
+      label('ULTIMATE READY · PLAY', 10, 102, !motion || Math.floor(time * 3) % 2 ? color.gold : '#ffe6b3', 6); let ux = 10 + ctx.measureText('ULTIMATE READY · PLAY ').width;
+      session.comboKeys.forEach((k, i) => { label(k, ux, 102, i < session.comboStep ? color.lime : i === session.comboStep ? color.cyan : color.dim, 7); ux += 9; });
+      label('· STRING 1 · FRETS 1-4', ux + 2, 102, color.dim, 6);
+    }
     else if (session.status === 'finished') label(session.reason === 'defeat' ? 'SIGNAL LOST' : 'FLOW COMPLETE', 10, 78, color.white, 6);
     if (session.status === 'playing' && session.timed && session.countingIn) label(`COUNT-IN · ${r.name.toUpperCase()} · ${r.bpm} BPM`, 470, 78, color.lime, 6, 'right');
     else if (session.status === 'playing' && !session.timed && session.current) label(`PACE ${session.wordLeft.toFixed(1)}s`, 470, 78, session.wordLeft < .6 ? color.root : color.dim, 6, 'right');
-    else if (session.status === 'ready') label(inputMode === 'notes' ? 'TYPE THE NOTE NAME · S OR # = SHARP · ↑ ↓ HOP' : 'W S HOP STRING · J X SPACE STRUM', 470, 78, color.dim, 6, 'right');
+    else if (session.status === 'ready') label(inputMode === 'notes' ? 'PRESS THE NOTE ONCE · A-G · → = SHARP ♯ · ← = FLAT ♭' : 'PRESS THE NOTE ONCE · OR W S HOP + J X SPACE STRUM', 470, 78, color.dim, 6, 'right');
     if (callout && time < callout.until) { label(callout.text, W / 2, 100, callout.color, 11, 'center'); }
   }
   function render() {

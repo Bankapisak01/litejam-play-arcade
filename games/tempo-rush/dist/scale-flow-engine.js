@@ -18,7 +18,9 @@
   const DEGREE = { 0: '1', 1: 'b2', 2: '2', 3: 'b3', 4: '3', 5: '4', 6: 'b5', 7: '5', 8: 'b6', 9: '6', 10: 'b7', 11: '7' };
 
   // ChallengeRules — same shape as the app; windows relaxed because typing a note name takes longer than plucking it.
-  const RULES = { countInBeats: 4, perfectMs: 90, greatMs: 160, goodMs: 240, perfectPoints: 100, greatPoints: 80, goodPoints: 50, maxScore: 100000, minBpm: 50, maxBpm: 160, defaultBpm: 80, defaultRoutine: 'set', paceMs: 2500 };
+  const RULES = { countInBeats: 4, perfectMs: 90, greatMs: 160, goodMs: 240, perfectPoints: 100, greatPoints: 80, goodPoints: 50, maxScore: 100000, minBpm: 50, maxBpm: 160, defaultBpm: 80, defaultRoutine: 'set', paceMs: 2500,
+    // The finisher (config.ultimate === 'combo'): with OVERDRIVE at 100%, play the chromatic run on string 1 — frets 1 2 3 4 (keys 1–4, in order, 2.5 s between presses) — to unleash it.
+    ultimateKeys: ['1', '2', '3', '4'], ultimateString: 1, ultimateDamage: 20, ultimateComboMs: 2500 };
   // Boss damage per grade is scaled so an all-GREAT run defeats Synth Drake exactly; PERFECT runs finish early.
   const DAMAGE = { perfect: 1.25, great: 1, good: .6 };
   const clamp = (n, a, b) => Math.max(a, Math.min(b, n));
@@ -90,9 +92,14 @@
     const frets = pattern.map(p => p.fret);
     return { pattern, steps, rounds, routine: plan, minFret: Math.min(...frets), maxFret: Math.max(...frets), rootPc };
   }
-  /** Typed text for a note: 'c', 'f#'. 's' is accepted as a sharp alias so no Shift is needed. */
+  /** Typed text for a note: 'c', 'f#'. The right arrow is the sharp key ('s' and '#' still work so no Shift is needed). */
   const typedFor = label => label.toLowerCase();
-  const normalizeKey = key => key === 's' ? '#' : key.toLowerCase();
+  const FLAT = '♭';
+  /** Enharmonic flat spelling of a sharp note, typed as the letter above plus the left arrow: G# → 'a♭'. Naturals have none. */
+  const flatFor = label => label.endsWith('#') ? NOTE_NAMES[(NAME_TO_PC[label] + 1) % 12].toLowerCase() + FLAT : '';
+  /** Both accepted spellings of a note label: ['g#', 'a♭'] or ['c']. */
+  const spellingsFor = label => [typedFor(label), flatFor(label)].filter(Boolean);
+  const normalizeKey = key => key === 's' || key === 'ArrowRight' ? '#' : key === 'ArrowLeft' ? FLAT : key.toLowerCase();
 
   class Session {
     constructor(options = {}) {
@@ -108,6 +115,8 @@
       this.judgements = []; this.points = 0; this.streak = 0; this.bestStreak = 0; this.combo = 0; this.bestCombo = 0;
       this.totalKeys = 0; this.correctKeys = 0; this.wrongAttempts = 0; this.mistakes = {};
       this.hp = 5; this.maxHp = 5; this.bossHp = 100; this.phase = 1; this.charge = 0; this.ultimates = 0;
+      // 'auto': a full OVERDRIVE fires on the next note. 'combo': it waits until the player plays the 1 2 3 4 finisher.
+      this.ultimateMode = this.config.ultimate === 'combo' ? 'combo' : 'auto'; this.comboStep = 0; this.comboAt = 0;
       this.beat = 'charge'; this.beatLeft = 0; this.beatDuration = 1; this.ammo = []; this.reaction = null; this.critical = false;
       this.wordLeft = 1; this.wordDuration = 1; this.readGrace = 0; this.round = 1; this.events = [];
       this.beatPtr = 0; this.retaliateUntil = 0; this.roundMisses = 0; this.heals = 0;
@@ -139,7 +148,10 @@
     get roundTimeLeftMs() { return this.timed && this.roundInfo ? Math.max(0, this.roundInfo.endMs - this.clock) : null; }
     get isComplete() { return this.cursor >= this.steps.length; }
     get current() { return this.isComplete ? null : this.steps[this.cursor]; }
-    get target() { return this.current ? typedFor(this.current.label) : ''; }
+    /** Every spelling the current note accepts: the sharp name first, then its flat name (G# → 'g#', 'a♭'). */
+    get spellings() { return this.current ? spellingsFor(this.current.label) : []; }
+    /** The spelling being typed: the flat one once its letter is in the buffer, otherwise the sharp name. */
+    get target() { const [sharp, flat] = this.spellings; return !sharp ? '' : flat && this.buffer && this.buffer[0] === flat[0] ? flat : sharp; }
     get stage() { return this.phase === 2 ? 3 : this.cursor > (this.steps.length >> 1) ? 2 : 1; }
     /** Counting in = waiting for the first note of a round (every round has its own count-in at its own tempo). */
     get countingIn() { return this.timed && !!this.current && this.current.roundStep === 0 && this.clock < this.dueMs(this.cursor) - RULES.goodMs; }
@@ -148,6 +160,9 @@
     /** Drake's counter is visual only: the next note's window must never be swallowed by the lockout. */
     get acceptingInput() { return this.status === 'playing' && !this.isComplete && this.windowOpen; }
     get damagePerNote() { return 100 / this.steps.length; }
+    /** Combo mode only: OVERDRIVE is full and the 1 2 3 4 finisher can be played. */
+    get ultimateReady() { return this.ultimateMode === 'combo' && this.charge >= 100; }
+    get comboKeys() { return RULES.ultimateKeys; }
     emit(type, data = {}) { this.events.push({ type, ...data }); }
     drain() { return this.events.splice(0); }
     arm() {
@@ -179,9 +194,10 @@
       if (key === 'Backspace') { this.buffer = this.buffer.slice(0, -1); this.emit('edit'); return true; }
       if (key === ' ' || key === 'Enter') return true;
       const k = normalizeKey(key);
-      if (!/^[a-g#]$/.test(k)) return false;
+      if (!/^[a-g#♭]$/.test(k)) return false;
       this.totalKeys++;
-      const i = this.buffer.length, target = this.target;
+      // The first letter picks the spelling (G or A for G#); after that the buffer follows that spelling.
+      const i = this.buffer.length, target = i ? this.target : this.spellings.find(t => t[0] === k) || this.target;
       if (i >= target.length + 2) { this.mistake(''); return true; }
       const correct = k === target[i] && target.startsWith(this.buffer);
       this.buffer += k;
@@ -212,12 +228,30 @@
       this.combo = perfectTyping ? this.combo + 1 : 0; this.bestCombo = Math.max(this.bestCombo, this.combo);
       this.charge = Math.min(100, this.charge + (g === 'perfect' ? 12 : g === 'great' ? 8 : 4));
       let kind = 'shot', damage = this.damagePerNote * DAMAGE[g];
-      if (this.charge >= 100) { kind = 'ultimate'; damage += 10; this.charge = 0; this.ultimates++; }
+      if (this.charge >= 100 && this.ultimateMode === 'auto') { kind = 'ultimate'; damage += 10; this.charge = 0; this.ultimates++; }
       else if (this.streak > 0 && this.streak % 4 === 0) { kind = 'charged'; damage += 2; }
       else if (note.isRoot) kind = 'slash';
       this.emit('hit', { grade: g, offsetMs: offset, note, index: this.cursor });
       this.strike({ kind, damage, note, grade: g });
       this.advanceCursor();
+    }
+    /** The finisher key (1–4). On a guitar controller that is string 1, frets 1 2 3 4: a chromatic run. Ignored outside combo mode; locked until OVERDRIVE is 100%. */
+    ultimateKey(key) {
+      if (this.ultimateMode !== 'combo' || this.status !== 'playing') return false;
+      const keys = RULES.ultimateKeys, k = String(key); if (!keys.includes(k)) return false;
+      if (!this.ultimateReady) { this.comboStep = 0; this.emit('ultimateLocked', { key: k, charge: this.charge }); return true; }
+      if (k === keys[this.comboStep]) {
+        this.comboStep++; this.comboAt = this.clock; this.emit('ultimateStep', { step: this.comboStep, key: k, fret: Number(k), string: RULES.ultimateString });
+        if (this.comboStep === keys.length) this.unleash();
+      } else { this.comboStep = k === keys[0] ? 1 : 0; this.comboAt = this.clock; this.emit('ultimateBreak', { key: k, step: this.comboStep }); }
+      return true;
+    }
+    /** RGB Overdrive: the finisher lands on Synth Drake and empties the meter. */
+    unleash() {
+      this.comboStep = 0; this.charge = 0; this.ultimates++;
+      const note = this.current || this.steps[this.steps.length - 1];
+      this.emit('ultimate', { damage: RULES.ultimateDamage });
+      this.strike({ kind: 'ultimate', damage: RULES.ultimateDamage, note, grade: 'perfect' });
     }
     /** The flow always plays every round to the end; Synth Drake going down early is a stagger, not a stop. */
     strike(attack) {
@@ -255,6 +289,7 @@
       if (this.status !== 'playing' || !Number.isFinite(dtSeconds) || dtSeconds <= 0) return;
       const dt = dtSeconds * 1000; this.elapsed += dtSeconds;
       this.clock += dt;
+      if (this.comboStep && this.clock - this.comboAt > RULES.ultimateComboMs) { this.comboStep = 0; this.emit('ultimateBreak', { step: 0, timeout: true }); }
       if (!this.timed) {
         this.beat = 'charge';
         if (this.current) {
@@ -299,5 +334,5 @@
     if (firstClear) xp += 30; if (personalBest) xp += 20; if (stats.fullCombo) xp += 25;
     return xp;
   }
-  return { Session, buildRun, RULES, PATTERNS, ROUTINES, NOTE_NAMES, NAME_TO_PC, DATA, typedFor, xpFor, clamp };
+  return { Session, buildRun, RULES, PATTERNS, ROUTINES, NOTE_NAMES, NAME_TO_PC, DATA, typedFor, flatFor, spellingsFor, FLAT, xpFor, clamp };
 });
