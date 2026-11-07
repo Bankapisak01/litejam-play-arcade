@@ -91,3 +91,5 @@ Pixelify Sans supplies pixel headings/buttons, with Inter for readable descripti
 This is a **private team handoff**, not a blanket open-source license for LiteJam branding, sprites, or music. See [asset and font notices](docs/THIRD-PARTY-NOTICES.md), [design decisions](docs/design.md), and [contributor guidance](AGENTS.md).
 
 `npm run relocatable` rebuilds `dist-web/`, a copy of the hub and the three games with every link relative, for hosting under any sub-path (the private claude.ai artifact is published from it). It is generated output and stays out of Git.
+
+**GitHub Pages.** `.github/workflows/pages.yml` runs the checks, builds `dist-web/` and deploys it on every push to `main`. Enable it once in the repository's Settings → Pages → Source: **GitHub Actions**; the site then lives at `https://<owner>.github.io/litejam-play-arcade/`. GitHub only serves Pages for a public repository on the free plan, so making the game public to try is a visibility decision for the team.
