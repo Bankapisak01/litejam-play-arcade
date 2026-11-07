@@ -1,0 +1,136 @@
+{
+  "3": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "flux-2-klein-4b-fp8.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "4": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "flux2",
+      "device": "default"
+    }
+  },
+  "5": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "4",
+        0
+      ],
+      "text": "Spectacular 16-bit pixel art game visual effect, ONE isolated effect centered on perfectly pure BLACK. Sharp readable pixel clusters, bright cyan white core, saturated magenta violet energy and small orange sparks. Entire effect visible with generous black margins, no character, no text, no border, no sprite sheet. An explosive circular OVERDRIVE transformation aura: a large EMPTY BLACK central hole for a dragon boss, jagged electric crown flames radiating outward, two broken concentric neon rings, four long diagonal lightning spikes. Spectacular powerful radial silhouette, no solid center."
+    }
+  },
+  "7": {
+    "class_type": "ConditioningZeroOut",
+    "inputs": {
+      "conditioning": [
+        "6",
+        0
+      ]
+    }
+  },
+  "17": {
+    "class_type": "EmptyFlux2LatentImage",
+    "inputs": {
+      "width": 768,
+      "height": 768,
+      "batch_size": 1
+    }
+  },
+  "18": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 2026110910
+    }
+  },
+  "19": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    }
+  },
+  "20": {
+    "class_type": "Flux2Scheduler",
+    "inputs": {
+      "steps": 4,
+      "width": 768,
+      "height": 768
+    }
+  },
+  "21": {
+    "class_type": "CFGGuider",
+    "inputs": {
+      "model": [
+        "3",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "cfg": 1.0
+    }
+  },
+  "22": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "18",
+        0
+      ],
+      "guider": [
+        "21",
+        0
+      ],
+      "sampler": [
+        "19",
+        0
+      ],
+      "sigmas": [
+        "20",
+        0
+      ],
+      "latent_image": [
+        "17",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "22",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ]
+    }
+  },
+  "24": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "23",
+        0
+      ],
+      "filename_prefix": "boss-phase2/boss-overdrive"
+    }
+  }
+}

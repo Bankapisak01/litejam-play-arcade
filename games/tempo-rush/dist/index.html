@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#100e16"><title>LiteJam Play: Arcade — Tempo Rush</title>
+  <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="/shared/arcade-shell.css">
+  <script type="module" src="app.js"></script><script type="module" src="/shared/arcade-shell.js"></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to game</a>
+  <main id="main">
+    <header class="topbar"><a class="brand arcade-brand" href="/"><img class="arcade-brand-logo" src="/assets/brand/litejam.png" alt="LiteJam"><span class="arcade-brand-copy"><strong>LiteJam Play: Arcade</strong><small>Tempo Rush</small></span></a><a class="arcade-game-nav" href="/">← Back to Arcade</a></header>
+    <section id="lobby" aria-label="Choose a song and difficulty">
+      <div class="intro"><div><p class="eyebrow">FOUR KEYS. ONE STAGE.</p><h1>FIND YOUR<br><span>RHYTHM.</span></h1><p class="subtitle">Hit the beat and rock out with Punkman.<br>Two original pixel-rock tracks. Your stage awaits.</p></div><div class="key-guide" aria-label="Use the D F J K keys"><div class="mini-keys"><kbd>D</kbd><kbd>F</kbd><kbd>J</kbd><kbd>K</kbd></div><p>Press when notes reach the rings.<br>Hold long notes until their tails pass.</p></div></div>
+      <div class="section-label"><span>01 / SELECT YOUR TRACK</span><span>ORIGINAL SOUNDTRACK</span></div>
+      <div class="song-grid" id="song-grid" role="group" aria-label="Choose a song"></div>
+      <div class="setup-bar"><div class="difficulty-group"><p class="eyebrow">02 / DIFFICULTY</p><div class="segmented" role="group" aria-label="Choose difficulty"><button type="button" data-difficulty="easy" aria-pressed="true">Easy <span>Find the beat</span></button><button type="button" data-difficulty="normal" aria-pressed="false">Normal <span>Add paired notes</span></button></div></div><div class="start-block"><p id="selection-detail">Setting the stage…</p><button id="start" class="primary" type="button" disabled>Loading artwork… <span aria-hidden="true">↗</span></button></div></div>
+      <div class="settings"><label class="volume-control" for="volume">Volume <input id="volume" type="range" min="0" max="100" value="70"><output id="volume-value" for="volume">70%</output></label><label for="offset">Input offset <select id="offset" aria-describedby="offset-help"></select></label><span id="offset-help">Positive values allow later presses</span><label class="motion-control"><input type="checkbox" id="reduce-motion"> Reduce motion</label></div>
+      <p id="load-status" class="load-status" role="status" aria-live="polite"></p>
+    </section>
+    <section id="game" hidden aria-label="Tempo Rush stage">
+      <div class="game-heading"><div><p class="eyebrow" id="game-difficulty">EASY · 120 BPM</p><h1 id="game-title">Neon Heartbeat</h1></div><div class="game-actions"><button type="button" id="retry-top" class="quiet">Restart</button><button type="button" id="pause" class="quiet">Pause <kbd>Esc</kbd></button></div></div>
+      <div class="scoreboard"><div><span>SCORE</span><strong id="score">000000</strong></div><div><span>COMBO</span><strong id="combo">0 <small>×1</small></strong></div><div><span>ACCURACY</span><strong id="accuracy">100.0<small>%</small></strong></div><div class="song-progress"><span id="section-name">GET READY</span><div class="progress-track"><i id="progress"></i></div><span id="song-time">0:00 / 1:30</span></div></div>
+      <div class="arena" id="arena"><canvas id="stage" width="1200" height="640" tabindex="0" aria-label="Game stage. Press D F J K with the notes. Press Escape to pause."></canvas>
+        <div class="lane-buttons" aria-label="Four note lanes"><button type="button" data-lane="0" aria-label="Play D lane">D</button><button type="button" data-lane="1" aria-label="Play F lane">F</button><button type="button" data-lane="2" aria-label="Play J lane">J</button><button type="button" data-lane="3" aria-label="Play K lane">K</button></div>
+        <div class="arena-overlay" id="pause-panel" hidden role="dialog" aria-modal="true" aria-labelledby="pause-title"><div class="modal-card"><p class="eyebrow">TAKE A BREATH</p><h2 id="pause-title">On a beat break</h2><p id="pause-reason">Music and notes are paused together.</p><button id="resume" type="button" class="primary">Resume <kbd>Space</kbd></button><div class="modal-actions"><button id="retry-pause" type="button" class="quiet">Restart song</button><button id="menu-pause" type="button" class="quiet">Choose song</button></div></div></div>
+      </div>
+      <div class="arena-footer"><span><i class="legend-dot"></i> PERFECT ±60 ms <span class="legend-secondary">· GOOD ±120 ms · OK ±180 ms</span></span><span>Hold long notes · Esc to pause</span></div>
+    </section>
+    <section id="results" hidden aria-label="Song results">
+      <div class="result-card"><p class="eyebrow">TRACK COMPLETE</p><h1 id="result-title">Neon Heartbeat</h1><p id="result-level" class="subtitle">Easy · 120 BPM</p><div class="result-main"><div class="rank" id="rank">A</div><div><p class="eyebrow">YOUR SCORE</p><strong id="result-score">000000</strong><p id="best-message">Personal best on this device</p></div></div><div class="result-stats"><div><span>ACCURACY</span><strong id="result-accuracy">0%</strong></div><div><span>MAX COMBO</span><strong id="result-combo">0</strong></div><div><span>NOTES</span><strong id="result-notes">0</strong></div></div><div class="judgement-counts" id="result-counts"></div><p id="result-tip" class="subtitle"></p><div class="result-actions"><button id="retry-result" class="primary" type="button">Play again ↗</button><button id="menu-result" class="quiet" type="button">Choose another song</button></div></div>
+    </section>
+    <footer><span>PIXEL ROCK. REAL RHYTHM.</span><span>Original music · Best played with a keyboard</span></footer>
+    <p id="announcement" class="sr-only" aria-live="polite"></p>
+  </main>
+</body>
+</html>

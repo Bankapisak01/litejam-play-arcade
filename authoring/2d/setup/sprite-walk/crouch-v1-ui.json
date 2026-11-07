@@ -1,0 +1,1039 @@
+{
+  "last_node_id": 24,
+  "last_link_id": 25,
+  "nodes": [
+    {
+      "id": 7,
+      "type": "CLIPLoader",
+      "pos": [
+        -450,
+        0
+      ],
+      "size": [
+        350,
+        150
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            7,
+            8
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader"
+      },
+      "widgets_values": [
+        "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+        "wan",
+        "default"
+      ],
+      "title": "CLIPLoader"
+    },
+    {
+      "id": 8,
+      "type": "VAELoader",
+      "pos": [
+        -450,
+        500
+      ],
+      "size": [
+        350,
+        150
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            11,
+            23
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "wan_2.1_vae.safetensors"
+      ],
+      "title": "VAELoader"
+    },
+    {
+      "id": 9,
+      "type": "UnetLoaderGGUF",
+      "pos": [
+        700,
+        0
+      ],
+      "size": [
+        350,
+        150
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UnetLoaderGGUF"
+      },
+      "widgets_values": [
+        "Wan2.2-I2V-A14B-HighNoise-Q4_K_M.gguf"
+      ],
+      "title": "Wan 2.2 I2V 14B high noise"
+    },
+    {
+      "id": 10,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        700,
+        180
+      ],
+      "size": [
+        350,
+        150
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            2
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoaderModelOnly"
+      },
+      "widgets_values": [
+        "wan22_lightning_high_noise_model.safetensors",
+        1.0
+      ],
+      "title": "Lightning 4-step (high)"
+    },
+    {
+      "id": 11,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        700,
+        360
+      ],
+      "size": [
+        350,
+        150
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            3
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoaderModelOnly"
+      },
+      "widgets_values": [
+        "wan2.2_animate_adapter_model.safetensors",
+        1.0
+      ],
+      "title": "Pixel-animate LoRA (high)"
+    },
+    {
+      "id": 12,
+      "type": "ModelSamplingSD3",
+      "pos": [
+        700,
+        540
+      ],
+      "size": [
+        350,
+        150
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            14
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelSamplingSD3"
+      },
+      "widgets_values": [
+        5.0
+      ],
+      "title": "ModelSamplingSD3"
+    },
+    {
+      "id": 13,
+      "type": "UnetLoaderGGUF",
+      "pos": [
+        1100,
+        0
+      ],
+      "size": [
+        350,
+        150
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            4
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UnetLoaderGGUF"
+      },
+      "widgets_values": [
+        "Wan2.2-I2V-A14B-LowNoise-Q4_K_M.gguf"
+      ],
+      "title": "Wan 2.2 I2V 14B low noise"
+    },
+    {
+      "id": 14,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        1100,
+        180
+      ],
+      "size": [
+        350,
+        150
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            5
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoaderModelOnly"
+      },
+      "widgets_values": [
+        "wan22_lightning_low_noise_model.safetensors",
+        1.0
+      ],
+      "title": "Lightning 4-step (low)"
+    },
+    {
+      "id": 15,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        1100,
+        360
+      ],
+      "size": [
+        350,
+        150
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            6
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoaderModelOnly"
+      },
+      "widgets_values": [
+        "wan2.2_animate_adapter_model.safetensors",
+        1.0
+      ],
+      "title": "Pixel-animate LoRA (low)"
+    },
+    {
+      "id": 16,
+      "type": "ModelSamplingSD3",
+      "pos": [
+        1100,
+        540
+      ],
+      "size": [
+        350,
+        150
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 6
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            18
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelSamplingSD3"
+      },
+      "widgets_values": [
+        5.0
+      ],
+      "title": "ModelSamplingSD3"
+    },
+    {
+      "id": 17,
+      "type": "CLIPTextEncode",
+      "pos": [
+        50,
+        0
+      ],
+      "size": [
+        540,
+        400
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            9
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "Pixel art game sprite animation. The exact same chibi punk guitarist facing RIGHT. Black and magenta spiky hair, pale face, black pink jacket, black trousers, pink boots, white electric guitar. Keep the character design and proportions unchanged. Crouch deeply: bend BOTH knees, lower the hips and head, spread knees outward, both boots planted on the floor. Hold a low compact crouching pose for most of the clip. Both hands hold the guitar horizontally at waist level. Then stand up again. Static right-facing side-view camera, entire body and guitar always visible, generous margins. Stay centered in place, flat solid gray background. Crisp pixel art. No visual effects. One action with distinct anticipation, action and recovery poses."
+      ],
+      "title": "Motion prompt"
+    },
+    {
+      "id": 18,
+      "type": "CLIPTextEncode",
+      "pos": [
+        50,
+        500
+      ],
+      "size": [
+        540,
+        400
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            10
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "camera movement, zoom, turning to face camera, facing left, walking, running, moving across screen, cropped head, cropped guitar, extra hands, extra limbs, different clothing, missing guitar, detached guitar, photorealistic, 3d, blurry, background scenery, floor, shadows, text, watermark, energy effects, sparks, glow, trails"
+      ],
+      "title": "Negative"
+    },
+    {
+      "id": 19,
+      "type": "WanFirstLastFrameToVideo",
+      "pos": [
+        1520,
+        420
+      ],
+      "size": [
+        350,
+        150
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 9
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 10
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 11
+        },
+        {
+          "name": "start_image",
+          "type": "IMAGE",
+          "link": 12
+        },
+        {
+          "name": "end_image",
+          "type": "IMAGE",
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            15,
+            19
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            16,
+            20
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "links": [
+            17
+          ],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WanFirstLastFrameToVideo"
+      },
+      "widgets_values": [
+        512,
+        512,
+        33,
+        1
+      ],
+      "title": "WanFirstLastFrameToVideo"
+    },
+    {
+      "id": 20,
+      "type": "KSamplerAdvanced",
+      "pos": [
+        1920,
+        0
+      ],
+      "size": [
+        350,
+        320
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 14
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 15
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 16
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 17
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            21
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSamplerAdvanced"
+      },
+      "widgets_values": [
+        "enable",
+        2026110601,
+        "fixed",
+        4,
+        1.0,
+        "euler",
+        "simple",
+        0,
+        2,
+        "enable"
+      ],
+      "title": "High noise (steps 0-2)"
+    },
+    {
+      "id": 21,
+      "type": "KSamplerAdvanced",
+      "pos": [
+        2320,
+        0
+      ],
+      "size": [
+        350,
+        320
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 18
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 19
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 20
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 21
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            22
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSamplerAdvanced"
+      },
+      "widgets_values": [
+        "disable",
+        2026110601,
+        "fixed",
+        4,
+        1.0,
+        "euler",
+        "simple",
+        2,
+        10000,
+        "disable"
+      ],
+      "title": "Low noise (steps 2-4)"
+    },
+    {
+      "id": 22,
+      "type": "VAEDecode",
+      "pos": [
+        2720,
+        0
+      ],
+      "size": [
+        350,
+        150
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 22
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 23
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            24,
+            25
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": [],
+      "title": "VAEDecode"
+    },
+    {
+      "id": 23,
+      "type": "SaveAnimatedWEBP",
+      "pos": [
+        2720,
+        220
+      ],
+      "size": [
+        350,
+        150
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 24
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveAnimatedWEBP"
+      },
+      "widgets_values": [
+        "crouch-v1/raw-animation",
+        16.0,
+        true,
+        100,
+        "default"
+      ],
+      "title": "Raw video preview"
+    },
+    {
+      "id": 2,
+      "type": "LoadImage",
+      "pos": [
+        -450,
+        730
+      ],
+      "size": [
+        350,
+        150
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            12,
+            13
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "punkman-walk-start.png"
+      ],
+      "title": "LoadImage"
+    },
+    {
+      "id": 24,
+      "type": "SaveImage",
+      "pos": [
+        3140,
+        220
+      ],
+      "size": [
+        350,
+        150
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 25
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "crouch-v1/frame"
+      ],
+      "title": "SaveImage"
+    }
+  ],
+  "links": [
+    [
+      1,
+      9,
+      0,
+      10,
+      0,
+      "MODEL"
+    ],
+    [
+      2,
+      10,
+      0,
+      11,
+      0,
+      "MODEL"
+    ],
+    [
+      3,
+      11,
+      0,
+      12,
+      0,
+      "MODEL"
+    ],
+    [
+      4,
+      13,
+      0,
+      14,
+      0,
+      "MODEL"
+    ],
+    [
+      5,
+      14,
+      0,
+      15,
+      0,
+      "MODEL"
+    ],
+    [
+      6,
+      15,
+      0,
+      16,
+      0,
+      "MODEL"
+    ],
+    [
+      7,
+      7,
+      0,
+      17,
+      0,
+      "CLIP"
+    ],
+    [
+      8,
+      7,
+      0,
+      18,
+      0,
+      "CLIP"
+    ],
+    [
+      9,
+      17,
+      0,
+      19,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      10,
+      18,
+      0,
+      19,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      11,
+      8,
+      0,
+      19,
+      2,
+      "VAE"
+    ],
+    [
+      12,
+      2,
+      0,
+      19,
+      3,
+      "IMAGE"
+    ],
+    [
+      13,
+      2,
+      0,
+      19,
+      4,
+      "IMAGE"
+    ],
+    [
+      14,
+      12,
+      0,
+      20,
+      0,
+      "MODEL"
+    ],
+    [
+      15,
+      19,
+      0,
+      20,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      16,
+      19,
+      1,
+      20,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      17,
+      19,
+      2,
+      20,
+      3,
+      "LATENT"
+    ],
+    [
+      18,
+      16,
+      0,
+      21,
+      0,
+      "MODEL"
+    ],
+    [
+      19,
+      19,
+      0,
+      21,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      20,
+      19,
+      1,
+      21,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      21,
+      20,
+      0,
+      21,
+      3,
+      "LATENT"
+    ],
+    [
+      22,
+      21,
+      0,
+      22,
+      0,
+      "LATENT"
+    ],
+    [
+      23,
+      8,
+      0,
+      22,
+      1,
+      "VAE"
+    ],
+    [
+      24,
+      22,
+      0,
+      23,
+      0,
+      "IMAGE"
+    ],
+    [
+      25,
+      22,
+      0,
+      24,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.5,
+      "offset": [
+        500,
+        150
+      ]
+    }
+  },
+  "version": 0.4
+}

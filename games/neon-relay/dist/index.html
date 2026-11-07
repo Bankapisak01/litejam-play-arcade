@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#100c17">
+  <meta name="description" content="LiteJam Play: Arcade — Neon Relay. A pixel action game with keyboard and touch controls.">
+  <title>LiteJam Play: Arcade — Neon Relay</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/shared/arcade-shell.css">
+  <link rel="stylesheet" href="/shared/play-shell.css">
+  <script src="/shared/arcade-shell.js" defer></script>
+</head>
+<body class="play-page neon-play">
+  <header class="play-header">
+    <a href="/" class="arcade-brand" aria-label="LiteJam Play: Arcade home"><img class="arcade-brand-logo" src="/assets/brand/litejam.png" alt="LiteJam"><span class="arcade-brand-copy">LiteJam Play: Arcade<span class="brand-sub">NEON RELAY</span></span></a>
+    <div class="play-header-actions"><a class="arcade-game-nav" href="/">← Back to Arcade</a><button class="play-icon-button" id="pause" aria-haspopup="dialog" aria-controls="pause-menu">Menu <kbd>ESC</kbd></button></div>
+  </header>
+  <main class="play-layout">
+    <section class="game-panel" aria-label="Neon Relay game">
+      <div class="game-top"><span><b class="live-square"></b> STAGE 01 <span class="dim">/</span> THE ROOFTOPS</span><span class="game-actions"><button id="fullscreen-pause" class="fullscreen-menu" aria-haspopup="dialog" aria-controls="pause-menu">Menu / Pause</button><button id="fullscreen" aria-label="Enter fullscreen" title="Toggle fullscreen">⛶</button></span></div>
+      <div class="viewport" id="viewport">
+        <canvas id="game" width="960" height="540" tabindex="0" aria-label="Neon Relay game area. A and D: move. S: crouch. Space: jump. J: shoot. X: slash. Hold J or X to charge. K: dash. L: ultimate. P or Escape: menu and pause.">Your browser does not support Canvas.</canvas>
+        <div class="overlay" id="overlay">
+          <div class="overlay-inner"><span class="mission-label" id="overlay-label">NEON RELAY / STAGE 01</span><h1 id="overlay-title">MAKE SOME<br><span>NOISE.</span></h1><p id="overlay-description">Fight through the drones, defeat Synth Drake,<br>and reach the relay gate.</p><button class="primary" id="start">Start game <span>↗</span></button><p class="start-hint" id="start-hint">ENTER to start · Controls &amp; sound in Menu</p></div>
+        </div>
+        <div class="notification" id="notification" role="status" aria-live="polite"></div>
+      </div>
+      <div class="game-bottom"><span><span class="cyan-dot"></span><span id="status">Ready to relay</span></span><span class="quick-hint">A D <span>MOVE</span><b>·</b> SPACE <span>JUMP</span><b>·</b> J X <span>ATTACK</span></span></div>
+      <div class="touch-controls" aria-label="Touch controls"><div><button data-key="ArrowLeft" aria-label="Move left">←</button><button data-key="ArrowDown" aria-label="Crouch">↓</button><button data-key="ArrowRight" aria-label="Move right">→</button></div><div><button data-key="KeyK" aria-label="Dash">Dash</button><button data-key="Space" aria-label="Jump">Jump</button><button data-key="KeyX" aria-label="Slash. Hold to charge.">Slash</button><button data-key="KeyJ" class="shoot-touch" aria-label="Shoot. Hold to charge.">Shoot</button><button data-key="KeyL" class="ultimate-touch" aria-label="RGB Slash ultimate">RGB</button></div></div>
+      <p class="rotate-hint">Turn your phone sideways for a wider view.</p>
+      <dialog class="play-menu" id="pause-menu" aria-labelledby="menu-title" aria-describedby="menu-description">
+        <div class="play-menu-top"><div><p class="play-kicker">NEON RELAY / BREAK IN THE SIGNAL</p><h2 id="menu-title">Take a breather.</h2><p class="play-menu-description" id="menu-description">Set your sound, learn the moves, then bring the noise.</p></div><button id="menu-close" class="play-menu-close" aria-label="Close menu">×</button></div>
+        <div class="play-menu-grid">
+          <section class="play-menu-section"><h3>Take control</h3><dl class="play-control-list"><div><dt>Move</dt><dd><kbd>A</kbd> <kbd>D</kbd> / <kbd>←</kbd> <kbd>→</kbd></dd></div><div><dt>Crouch</dt><dd><kbd>S</kbd> / <kbd>↓</kbd></dd></div><div><dt>Jump</dt><dd><kbd>SPACE</kbd></dd></div><div><dt>Shoot / slash</dt><dd><kbd>J</kbd> / <kbd>X</kbd></dd></div><div><dt>Dash / RGB ultimate</dt><dd><kbd>K</kbd> / <kbd>L</kbd></dd></div><div><dt>Pause / resume</dt><dd><kbd>P</kbd> / <kbd>ESC</kbd></dd></div></dl><p class="menu-note">Hold J or X, then release to charge an attack. Cyan glow = full charge. Hits and energy pickups fill your RGB meter.</p></section>
+          <section class="play-menu-section"><h3>Make it yours</h3><button id="sound" class="menu-setting" aria-label="Enable sound" aria-pressed="false">Sound off</button><button id="cinema" class="menu-setting" aria-label="Toggle ultimate cutscenes" aria-pressed="true">Cinema on</button><p class="menu-note">Cinema controls ultimate cutscenes and boss transitions. Reduced motion follows your device preference.</p><h3 class="mission-heading">Your mission</h3><p>Cross the rooftops, collect energy, defeat Synth Drake, and reach the relay gate.</p><p class="menu-note">At half health, Drake enters Overdrive. Jump over all three Sonic Quake waves.</p></section>
+        </div>
+        <div class="play-menu-actions"><button class="primary" id="menu-resume" autofocus>Back to game <span>↗</span></button><button class="secondary" id="restart" disabled>Restart stage</button><button class="secondary" id="practice" disabled>Boss practice</button><a class="menu-arcade-link" href="/">Back to Arcade ↗</a></div>
+      </dialog>
+    </section>
+  </main>
+  <script src="vfx.js"></script><script src="boss.js"></script><script src="game.js"></script>
+</body>
+</html>

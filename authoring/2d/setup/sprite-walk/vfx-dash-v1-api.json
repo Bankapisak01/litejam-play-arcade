@@ -1,0 +1,136 @@
+{
+  "3": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "flux-2-klein-4b-fp8.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "4": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "flux2",
+      "device": "default"
+    }
+  },
+  "5": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "4",
+        0
+      ],
+      "text": "Premium 16-bit pixel art DASH SPEED EFFECT for a side scrolling action game. ONE isolated horizontal energy wake centered on perfectly pure BLACK. The character dashes to the RIGHT: a thin curved cyan pressure ring at the RIGHT end, long tapered magenta and cyan flame speed streaks trail far to the LEFT. Hollow BLACK inside the pressure ring, sharp white edge accents, small detached pixel sparks. Wide horizontal silhouette, about three times wider than tall. Bright saturated neon pink and turquoise. Crisp chunky pixel clusters, restrained glow, generous empty margins, entire effect visible. No character, no weapon, no projectile ball, no scene, no floor, no text, no labels, no border, no sprite sheet."
+    }
+  },
+  "7": {
+    "class_type": "ConditioningZeroOut",
+    "inputs": {
+      "conditioning": [
+        "6",
+        0
+      ]
+    }
+  },
+  "17": {
+    "class_type": "EmptyFlux2LatentImage",
+    "inputs": {
+      "width": 768,
+      "height": 768,
+      "batch_size": 1
+    }
+  },
+  "18": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 2026110721
+    }
+  },
+  "19": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    }
+  },
+  "20": {
+    "class_type": "Flux2Scheduler",
+    "inputs": {
+      "steps": 4,
+      "width": 768,
+      "height": 768
+    }
+  },
+  "21": {
+    "class_type": "CFGGuider",
+    "inputs": {
+      "model": [
+        "3",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "cfg": 1.0
+    }
+  },
+  "22": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "18",
+        0
+      ],
+      "guider": [
+        "21",
+        0
+      ],
+      "sampler": [
+        "19",
+        0
+      ],
+      "sigmas": [
+        "20",
+        0
+      ],
+      "latent_image": [
+        "17",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "22",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ]
+    }
+  },
+  "24": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "23",
+        0
+      ],
+      "filename_prefix": "vfx-v1/dash"
+    }
+  }
+}

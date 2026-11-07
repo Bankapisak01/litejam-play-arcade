@@ -1,0 +1,1521 @@
+{
+  "version": 1,
+  "song_id": "neon-heartbeat",
+  "difficulty": "easy",
+  "bpm": 120,
+  "meter": [
+    4,
+    4
+  ],
+  "audio": "../audio/neon-heartbeat.wav",
+  "audio_offset_seconds": 0,
+  "lanes": [
+    "D",
+    "F",
+    "J",
+    "K"
+  ],
+  "music_duration_seconds": 88.0,
+  "notes": [
+    {
+      "time": 4.0,
+      "beat": 8,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "intro",
+      "pitch": 67,
+      "accent": false
+    },
+    {
+      "time": 4.5,
+      "beat": 9,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "intro",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 5.0,
+      "beat": 10,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "intro",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 5.5,
+      "beat": 11,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "intro",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 6.0,
+      "beat": 12,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "intro",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 6.5,
+      "beat": 13,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "intro",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 7.0,
+      "beat": 14,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "intro",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 7.5,
+      "beat": 15,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "intro",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 8.0,
+      "beat": 16,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 8.5,
+      "beat": 17,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 9.0,
+      "beat": 18,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 9.5,
+      "beat": 19,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 10.0,
+      "beat": 20,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 10.5,
+      "beat": 21,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 11.0,
+      "beat": 22,
+      "lane": 0,
+      "type": "hold",
+      "duration": 0.765,
+      "section": "verse",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 12.0,
+      "beat": 24,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 12.5,
+      "beat": 25,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 13.0,
+      "beat": 26,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 13.5,
+      "beat": 27,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 14.0,
+      "beat": 28,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 78,
+      "accent": false
+    },
+    {
+      "time": 14.5,
+      "beat": 29,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 15.25,
+      "beat": 30.5,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 16.0,
+      "beat": 32,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 16.5,
+      "beat": 33,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 17.0,
+      "beat": 34,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 17.5,
+      "beat": 35,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 18.0,
+      "beat": 36,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 18.5,
+      "beat": 37,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 19.0,
+      "beat": 38,
+      "lane": 0,
+      "type": "hold",
+      "duration": 0.765,
+      "section": "verse",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 20.0,
+      "beat": 40,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 20.5,
+      "beat": 41,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 21.0,
+      "beat": 42,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 21.5,
+      "beat": 43,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 22.0,
+      "beat": 44,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 78,
+      "accent": false
+    },
+    {
+      "time": 22.5,
+      "beat": 45,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 23.25,
+      "beat": 46.5,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 24.0,
+      "beat": 48,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 24.5,
+      "beat": 49,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 25.0,
+      "beat": 50,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 25.5,
+      "beat": 51,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 26.0,
+      "beat": 52,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 26.5,
+      "beat": 53,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 27.0,
+      "beat": 54,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 27.5,
+      "beat": 55,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 28.0,
+      "beat": 56,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 28.5,
+      "beat": 57,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 88,
+      "accent": false
+    },
+    {
+      "time": 29.0,
+      "beat": 58,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 29.5,
+      "beat": 59,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 30.0,
+      "beat": 60,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 30.5,
+      "beat": 61,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 31.0,
+      "beat": 62,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 31.5,
+      "beat": 63,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 71,
+      "accent": false
+    },
+    {
+      "time": 32.0,
+      "beat": 64,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 32.5,
+      "beat": 65,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 33.0,
+      "beat": 66,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 33.5,
+      "beat": 67,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 34.0,
+      "beat": 68,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 34.5,
+      "beat": 69,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 35.0,
+      "beat": 70,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 35.5,
+      "beat": 71,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 36.0,
+      "beat": 72,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 36.5,
+      "beat": 73,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 88,
+      "accent": false
+    },
+    {
+      "time": 37.0,
+      "beat": 74,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 37.5,
+      "beat": 75,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 38.0,
+      "beat": 76,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 38.5,
+      "beat": 77,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 39.0,
+      "beat": 78,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 39.5,
+      "beat": 79,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 71,
+      "accent": false
+    },
+    {
+      "time": 40.0,
+      "beat": 80,
+      "lane": 1,
+      "type": "hold",
+      "duration": 0.765,
+      "section": "break",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 41.0,
+      "beat": 82,
+      "lane": 2,
+      "type": "hold",
+      "duration": 0.765,
+      "section": "break",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 42.0,
+      "beat": 84,
+      "lane": 0,
+      "type": "hold",
+      "duration": 0.765,
+      "section": "break",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 43.0,
+      "beat": 86,
+      "lane": 1,
+      "type": "hold",
+      "duration": 0.765,
+      "section": "break",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 44.0,
+      "beat": 88,
+      "lane": 0,
+      "type": "hold",
+      "duration": 0.765,
+      "section": "break",
+      "pitch": 71,
+      "accent": false
+    },
+    {
+      "time": 45.0,
+      "beat": 90,
+      "lane": 0,
+      "type": "hold",
+      "duration": 0.765,
+      "section": "break",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 46.0,
+      "beat": 92,
+      "lane": 1,
+      "type": "hold",
+      "duration": 0.765,
+      "section": "break",
+      "pitch": 78,
+      "accent": false
+    },
+    {
+      "time": 47.0,
+      "beat": 94,
+      "lane": 2,
+      "type": "hold",
+      "duration": 0.765,
+      "section": "break",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 48.0,
+      "beat": 96.0,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 48.5,
+      "beat": 97.0,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 49.0,
+      "beat": 98.0,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 88,
+      "accent": false
+    },
+    {
+      "time": 49.5,
+      "beat": 99.0,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 50.0,
+      "beat": 100.0,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 88,
+      "accent": false
+    },
+    {
+      "time": 50.5,
+      "beat": 101.0,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 51.0,
+      "beat": 102.0,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 51.5,
+      "beat": 103,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 52.0,
+      "beat": 104.0,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 52.5,
+      "beat": 105.0,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 53.0,
+      "beat": 106.0,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 88,
+      "accent": false
+    },
+    {
+      "time": 53.5,
+      "beat": 107.0,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 54.0,
+      "beat": 108,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 55.0,
+      "beat": 110,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 55.5,
+      "beat": 111,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 56.0,
+      "beat": 112.0,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 78,
+      "accent": false
+    },
+    {
+      "time": 56.5,
+      "beat": 113.0,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 85,
+      "accent": false
+    },
+    {
+      "time": 57.0,
+      "beat": 114.0,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 57.5,
+      "beat": 115.0,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 85,
+      "accent": false
+    },
+    {
+      "time": 58.0,
+      "beat": 116.0,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 88,
+      "accent": false
+    },
+    {
+      "time": 58.5,
+      "beat": 117.0,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 59.0,
+      "beat": 118.0,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 59.5,
+      "beat": 119,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 60.0,
+      "beat": 120.0,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 78,
+      "accent": false
+    },
+    {
+      "time": 60.5,
+      "beat": 121.0,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 85,
+      "accent": false
+    },
+    {
+      "time": 61.0,
+      "beat": 122.0,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 61.5,
+      "beat": 123.0,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 85,
+      "accent": false
+    },
+    {
+      "time": 62.0,
+      "beat": 124,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 63.0,
+      "beat": 126,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 63.5,
+      "beat": 127,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 64.0,
+      "beat": 128,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 64.5,
+      "beat": 129,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 65.0,
+      "beat": 130,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 65.5,
+      "beat": 131,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 66.0,
+      "beat": 132,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 66.5,
+      "beat": 133,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 67.0,
+      "beat": 134,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 67.5,
+      "beat": 135,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 68.0,
+      "beat": 136,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 68.5,
+      "beat": 137,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 88,
+      "accent": false
+    },
+    {
+      "time": 69.0,
+      "beat": 138,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 69.5,
+      "beat": 139,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 70.0,
+      "beat": 140,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 70.5,
+      "beat": 141,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 71.0,
+      "beat": 142,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 71.5,
+      "beat": 143,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 71,
+      "accent": false
+    },
+    {
+      "time": 72.0,
+      "beat": 144,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 72.5,
+      "beat": 145,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 73.0,
+      "beat": 146,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 73.5,
+      "beat": 147,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 74.0,
+      "beat": 148,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 74.5,
+      "beat": 149,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 75.0,
+      "beat": 150,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 75.5,
+      "beat": 151,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 76.0,
+      "beat": 152,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 76.5,
+      "beat": 153,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 88,
+      "accent": false
+    },
+    {
+      "time": 77.0,
+      "beat": 154,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 77.5,
+      "beat": 155,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 78.0,
+      "beat": 156,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 78.5,
+      "beat": 157,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 79.0,
+      "beat": 158,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 79.5,
+      "beat": 159,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 71,
+      "accent": false
+    },
+    {
+      "time": 80.0,
+      "beat": 160,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "outro",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 80.5,
+      "beat": 161,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "outro",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 81.0,
+      "beat": 162,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "outro",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 81.5,
+      "beat": 163,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "outro",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 82.0,
+      "beat": 164,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "outro",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 82.5,
+      "beat": 165,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "outro",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 83.0,
+      "beat": 166,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "outro",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 83.5,
+      "beat": 167,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "outro",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 84.0,
+      "beat": 168,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "outro",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 84.5,
+      "beat": 169,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "outro",
+      "pitch": 88,
+      "accent": false
+    },
+    {
+      "time": 85.0,
+      "beat": 170,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "outro",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 85.5,
+      "beat": 171,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "outro",
+      "pitch": 79,
+      "accent": false
+    }
+  ]
+}

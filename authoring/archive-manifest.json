@@ -1,0 +1,1230 @@
+{
+  "purpose": "2D authoring sources preserved before local workspace cleanup",
+  "files": [
+    {
+      "path": "2d/setup/sprite-walk/boss-breath-v1-api.json",
+      "bytes": 6268,
+      "sha256": "b8d1dca56244c95a95e36e9d69268a2bc3b6a38e3e6c38b0abbf06c654ed0827"
+    },
+    {
+      "path": "2d/setup/sprite-walk/boss-breath-v1-cutouts-api.json",
+      "bytes": 2911,
+      "sha256": "adf385f0d6a1f4cea559a07c170516eb542e39a72410a91f25e280312cc4edc0"
+    },
+    {
+      "path": "2d/setup/sprite-walk/boss-breath-v1-selection.json",
+      "bytes": 29,
+      "sha256": "d5f7bfe4cfdb55e268800174ca11ef65e8405aebf46394f82ea3851f4c8274f8"
+    },
+    {
+      "path": "2d/setup/sprite-walk/boss-charge-v1-api.json",
+      "bytes": 6219,
+      "sha256": "401e16bd86cb98b647bb8a7496cd219808c65d45cc2fb525fb30c418f541750b"
+    },
+    {
+      "path": "2d/setup/sprite-walk/boss-charge-v1-cutouts-api.json",
+      "bytes": 2911,
+      "sha256": "011e009b023f241134cf117c489164b9c4fd4d0bb203f3a8379b201b461280a9"
+    },
+    {
+      "path": "2d/setup/sprite-walk/boss-charge-v1-selection.json",
+      "bytes": 29,
+      "sha256": "46a7c6afb0aeabd134d5a2631d5db46376cc07f498ca89479dda9661a323d854"
+    },
+    {
+      "path": "2d/setup/sprite-walk/boss-claw-v1-api.json",
+      "bytes": 6285,
+      "sha256": "2a3a656c0ab9a9545f8ab37ab89ac64f1002fba4f6790f3a196e1d0d945a4b1f"
+    },
+    {
+      "path": "2d/setup/sprite-walk/boss-claw-v1-cutouts-api.json",
+      "bytes": 2893,
+      "sha256": "47fcd924625f235ada78df8dfadf1bebbf2b9a8379e64c5693c44d23f4d5bd65"
+    },
+    {
+      "path": "2d/setup/sprite-walk/boss-claw-v1-selection.json",
+      "bytes": 29,
+      "sha256": "d5f7bfe4cfdb55e268800174ca11ef65e8405aebf46394f82ea3851f4c8274f8"
+    },
+    {
+      "path": "2d/setup/sprite-walk/boss-death-v1-api.json",
+      "bytes": 6209,
+      "sha256": "bbea84e7b079aa20fe1a0096cc827fd59882a11086974636ca8f505bb1c8b5e1"
+    },
+    {
+      "path": "2d/setup/sprite-walk/boss-death-v1-cutouts-api.json",
+      "bytes": 2902,
+      "sha256": "2287d841f470fbc8e9fd90d96e05b4ca6b852479272536146da67066d55cdd01"
+    },
+    {
+      "path": "2d/setup/sprite-walk/boss-death-v1-selection.json",
+      "bytes": 29,
+      "sha256": "46a7c6afb0aeabd134d5a2631d5db46376cc07f498ca89479dda9661a323d854"
+    },
+    {
+      "path": "2d/setup/sprite-walk/boss-hurt-v1-api.json",
+      "bytes": 6251,
+      "sha256": "be17ead17ccb31feae8bb6de99bf8971ab28ef5f9e926f51f2a51f07fbc2a616"
+    },
+    {
+      "path": "2d/setup/sprite-walk/boss-hurt-v1-cutouts-api.json",
+      "bytes": 2893,
+      "sha256": "e1ff57416f5d8f8ba78473838543dfbc2aeaeb229122db8adc72f6e036ad30a3"
+    },
+    {
+      "path": "2d/setup/sprite-walk/boss-hurt-v1-selection.json",
+      "bytes": 29,
+      "sha256": "d5f7bfe4cfdb55e268800174ca11ef65e8405aebf46394f82ea3851f4c8274f8"
+    },
+    {
+      "path": "2d/setup/sprite-walk/boss-idle-v1-api.json",
+      "bytes": 6226,
+      "sha256": "6b81c108ce6a563e73dc6d41b1c6860e5e89078bfda7b0cf57cb751189cc7699"
+    },
+    {
+      "path": "2d/setup/sprite-walk/boss-idle-v1-cutouts-api.json",
+      "bytes": 2893,
+      "sha256": "03604170c478e5ceb3086773808f874bff5444c80c90b27e33ff525363ffc924"
+    },
+    {
+      "path": "2d/setup/sprite-walk/boss-idle-v1-selection.json",
+      "bytes": 29,
+      "sha256": "d5f7bfe4cfdb55e268800174ca11ef65e8405aebf46394f82ea3851f4c8274f8"
+    },
+    {
+      "path": "2d/setup/sprite-walk/boss-master-v1-api.json",
+      "bytes": 3912,
+      "sha256": "8b705e25d166eea9fe0075cc524abda49d5540a0c1de342974f69965bc3f9655"
+    },
+    {
+      "path": "2d/setup/sprite-walk/boss-phase2-cutin-v1-api.json",
+      "bytes": 3657,
+      "sha256": "939a2f4a9b94193f4a13ced66997c36de37e2215e75777174eb7c3464fc42c2d"
+    },
+    {
+      "path": "2d/setup/sprite-walk/boss-stomp-v1-api.json",
+      "bytes": 6207,
+      "sha256": "22318906c81af17a3dbc84c68ce3242602ec351367c15fd3b0d70fa3e9b71205"
+    },
+    {
+      "path": "2d/setup/sprite-walk/boss-stomp-v1-cutouts-api.json",
+      "bytes": 2902,
+      "sha256": "78d130a6caa8a0b8e88141a93f21a1bcc4118a009376f879a64466a8d1a18c87"
+    },
+    {
+      "path": "2d/setup/sprite-walk/boss-stomp-v1-selection.json",
+      "bytes": 28,
+      "sha256": "93cf35ef88d211059fc474482e4ed7b39cc5bedba20dadda90407a1496ac7a7f"
+    },
+    {
+      "path": "2d/setup/sprite-walk/boss-walk-v1-api.json",
+      "bytes": 6289,
+      "sha256": "05b13abbe7d6f3d374b6a2b52f6cfb456d17b370d472c2db6d4dfc1394da3aab"
+    },
+    {
+      "path": "2d/setup/sprite-walk/boss-walk-v1-cutouts-api.json",
+      "bytes": 2893,
+      "sha256": "154e697dda0818abe829880700c77e51cf562685ecf1ad0c6486b5ca3f074ad2"
+    },
+    {
+      "path": "2d/setup/sprite-walk/boss-walk-v1-selection.json",
+      "bytes": 29,
+      "sha256": "d5f7bfe4cfdb55e268800174ca11ef65e8405aebf46394f82ea3851f4c8274f8"
+    },
+    {
+      "path": "2d/setup/sprite-walk/build_actions.py",
+      "bytes": 2714,
+      "sha256": "a557c1d294cc99411c5847ac2f886e1dafeb07a92aa8a58ba835252839335c70"
+    },
+    {
+      "path": "2d/setup/sprite-walk/build_boss_fx.py",
+      "bytes": 1800,
+      "sha256": "467d6606d0d3932109da54bf0193a6c1ba9a05a14098326f85a3f1162e0fe376"
+    },
+    {
+      "path": "2d/setup/sprite-walk/build_boss.py",
+      "bytes": 4664,
+      "sha256": "efaf9377e4b8074fefa010e8cb86e358aae558b9be2b019ad4f32e713121812b"
+    },
+    {
+      "path": "2d/setup/sprite-walk/build_combat.py",
+      "bytes": 2980,
+      "sha256": "154700de1b7e8aed5f9ca528be03ad2d868adcc98d41932647c8e958c5e2bf42"
+    },
+    {
+      "path": "2d/setup/sprite-walk/build_dash_vfx.py",
+      "bytes": 1110,
+      "sha256": "531b717ca845329a6f580921bbed565640fbce5001ae07989733f4ac65539fd4"
+    },
+    {
+      "path": "2d/setup/sprite-walk/build_phase2.py",
+      "bytes": 3468,
+      "sha256": "ad5373168f538c09e39445c30626c1ac7e705f3072c0d8d3620c0401ef187e43"
+    },
+    {
+      "path": "2d/setup/sprite-walk/build_vfx.py",
+      "bytes": 4124,
+      "sha256": "4c3c6e2985c2940e8609ae881b5284b266f614e83a14a4b7efece62a4caff229"
+    },
+    {
+      "path": "2d/setup/sprite-walk/crouch-v1-api.json",
+      "bytes": 6270,
+      "sha256": "6dc16474fac8308ab9d32b7f45652027c758e76b3316d856e8532b07f6a27835"
+    },
+    {
+      "path": "2d/setup/sprite-walk/crouch-v1-cutouts-api.json",
+      "bytes": 2866,
+      "sha256": "fc7ff4fd876215e0e01facf87fd2db656b738cdd9d1fd523c29df5f339c75875"
+    },
+    {
+      "path": "2d/setup/sprite-walk/crouch-v1-selection.json",
+      "bytes": 28,
+      "sha256": "50c90591211e97a3fb475903c7c22e07c44631e7d2fc200724770143e97ead1b"
+    },
+    {
+      "path": "2d/setup/sprite-walk/crouch-v1-ui.json",
+      "bytes": 17930,
+      "sha256": "86e09c92f5d511140284379ecf48cce761bf3a68758ebf6e4b653cd988597368"
+    },
+    {
+      "path": "2d/setup/sprite-walk/crouch-v2-api.json",
+      "bytes": 6334,
+      "sha256": "a9603bd9c90c24bcd0b4e0fdf4b27e6b6e10fa79a928957d12e7c865d75b1faa"
+    },
+    {
+      "path": "2d/setup/sprite-walk/crouch-v2-cutouts-api.json",
+      "bytes": 2866,
+      "sha256": "ad64c1e94d5ebfad509073aae5489164a49d0cf22420334849eb30cef8ccf323"
+    },
+    {
+      "path": "2d/setup/sprite-walk/crouch-v2-selection.json",
+      "bytes": 29,
+      "sha256": "caa30a5158b877c588b671506541d9305e1d849686a273f18f000ae4ef6dd6d6"
+    },
+    {
+      "path": "2d/setup/sprite-walk/crouch-v2-ui.json",
+      "bytes": 17994,
+      "sha256": "f29728051db8a327bd81f6c4c2a1113e0c88cf82b7d0c3eeb954a524a7a47a08"
+    },
+    {
+      "path": "2d/setup/sprite-walk/dash-v1-api.json",
+      "bytes": 6569,
+      "sha256": "ed93c8c3bd256bffc9b0d9dedb5b9049c679c5508c62a29ad6f413ab42f960a7"
+    },
+    {
+      "path": "2d/setup/sprite-walk/dash-v1-cutouts-api.json",
+      "bytes": 2848,
+      "sha256": "fdf26abd081f4b2ecf69632b2cb4dd68b1a3a978849ce26ffe2072d4f86057a0"
+    },
+    {
+      "path": "2d/setup/sprite-walk/dash-v1-selection.json",
+      "bytes": 28,
+      "sha256": "fbb06af9f3e58e2ca41bc59fe0a3de45f627b2aa299af27a6b6f783212cb623f"
+    },
+    {
+      "path": "2d/setup/sprite-walk/dash-v1-ui.json",
+      "bytes": 18229,
+      "sha256": "48448470384bef71a35abbf1196393363f9bb015e81bc6ea19866e28c25ac7a2"
+    },
+    {
+      "path": "2d/setup/sprite-walk/download_models.py",
+      "bytes": 3730,
+      "sha256": "7c75ea87d1b5663c8226629f82c8bc7460610a0075ccdfffca71c247d4a1ffe1"
+    },
+    {
+      "path": "2d/setup/sprite-walk/export_actions.py",
+      "bytes": 4293,
+      "sha256": "7d53ae91d72f2632a994798eb7b701e93553b4abef9d39711f433c905c2735f0"
+    },
+    {
+      "path": "2d/setup/sprite-walk/export_boss.py",
+      "bytes": 6801,
+      "sha256": "686180a671a6d1678211dc9dbf806180e0d89ebb28800532b21fbd92f5e18b71"
+    },
+    {
+      "path": "2d/setup/sprite-walk/export_frames.py",
+      "bytes": 6822,
+      "sha256": "34c46cc2847ac6dd4321d0a8e703e6b2d45cbb070b2c12b8f4a890992e12619d"
+    },
+    {
+      "path": "2d/setup/sprite-walk/export_phase2.py",
+      "bytes": 6138,
+      "sha256": "9b1a8974cdd4aa4d24a086324a0db14e54e66c813a012293263371923ba4fe8f"
+    },
+    {
+      "path": "2d/setup/sprite-walk/export_vfx.py",
+      "bytes": 5061,
+      "sha256": "20292daf602342e829347d7c61f5ef71c958d247d7056c8cfa876e7bd46c9523"
+    },
+    {
+      "path": "2d/setup/sprite-walk/fx-boss-breath-v1-api.json",
+      "bytes": 2632,
+      "sha256": "2925e357bb27e783beec2b9fec74fa72ba20f40f7b4aaee17c89fbc0995537ea"
+    },
+    {
+      "path": "2d/setup/sprite-walk/fx-boss-charge-v1-api.json",
+      "bytes": 2628,
+      "sha256": "74808d201535604fb0043ec0b640fd6b21904bad69874e5db08f83222a05b1e3"
+    },
+    {
+      "path": "2d/setup/sprite-walk/fx-boss-claw-v1-api.json",
+      "bytes": 2642,
+      "sha256": "73f01ca2aebae303169331de32b2277c1369465f2aca06316e6435ac820a80d9"
+    },
+    {
+      "path": "2d/setup/sprite-walk/fx-boss-overdrive-v1-api.json",
+      "bytes": 2687,
+      "sha256": "ee045165b2f7318c20593218e8b34c71275ffc9c4fe22d8ab876253ac2750102"
+    },
+    {
+      "path": "2d/setup/sprite-walk/fx-boss-quake-v1-api.json",
+      "bytes": 2686,
+      "sha256": "e8f89c03f694030161bbf592b6c4cad057d3cde004055f91b63ef39d5969245e"
+    },
+    {
+      "path": "2d/setup/sprite-walk/jump-v1-api.json",
+      "bytes": 6408,
+      "sha256": "8a847ebd49b56761658f5cc1841084bd51f9e3cc94edc5ae7e8409b5451e798c"
+    },
+    {
+      "path": "2d/setup/sprite-walk/jump-v2-api.json",
+      "bytes": 6467,
+      "sha256": "c2db86ef8a2d8cdc9966f0c7e94be9052c523d1b82f1e2dbfdfa4cde3cbaf789"
+    },
+    {
+      "path": "2d/setup/sprite-walk/jump-v2-cutouts-api.json",
+      "bytes": 2848,
+      "sha256": "6fb28df46597db1ff239e0fe35510a3f49139d2c779fcc8538f93e79f3c4181d"
+    },
+    {
+      "path": "2d/setup/sprite-walk/jump-v2-selection.json",
+      "bytes": 29,
+      "sha256": "e711d91ecb8e60ed8ff3d29e818ce48305929fbccde9b199d2c6f92993d76064"
+    },
+    {
+      "path": "2d/setup/sprite-walk/jump-v2-ui.json",
+      "bytes": 18127,
+      "sha256": "b6e11e668e36d2c8d27791df1c967d618a827ed247197c815e45bac643f42369"
+    },
+    {
+      "path": "2d/setup/sprite-walk/make_ui_workflow.py",
+      "bytes": 3157,
+      "sha256": "247df8cf42388f8d0521b3fa2b2976bf98759e0a06180a30202b92e30316eaef"
+    },
+    {
+      "path": "2d/setup/sprite-walk/model-manifest.json",
+      "bytes": 3954,
+      "sha256": "812c41bf39d1f9d8e7229161cc729b7ca56e151b6096f4df2134d160b48f6fae"
+    },
+    {
+      "path": "2d/setup/sprite-walk/package_actions.py",
+      "bytes": 2192,
+      "sha256": "05da4a3e266bcb3890dd3452b7c744087f1447299dc840b5e7f0b79506c0a3fa"
+    },
+    {
+      "path": "2d/setup/sprite-walk/package_combat.py",
+      "bytes": 1907,
+      "sha256": "738d7dd174cf05d13eea02ae1138dac58a6486144cab12a1b47f8ad349cbbd47"
+    },
+    {
+      "path": "2d/setup/sprite-walk/prep-api.json",
+      "bytes": 874,
+      "sha256": "b58382e7f956b7c8505d80219a61e37296d4ab75643c8e5df555a7734e41d7ad"
+    },
+    {
+      "path": "2d/setup/sprite-walk/prepare_boss_frames.py",
+      "bytes": 1504,
+      "sha256": "7402e77e30b51d0a0983ce6a8b458ab149eb8b4c56071c9356bab98e2e5dcafe"
+    },
+    {
+      "path": "2d/setup/sprite-walk/refine_crouch.py",
+      "bytes": 1196,
+      "sha256": "b5783287de05a8c34594b65376864aa7d582e5c989b30f3c61c74c870004faf6"
+    },
+    {
+      "path": "2d/setup/sprite-walk/refine_jump.py",
+      "bytes": 1395,
+      "sha256": "c9ab961180a24911862b9fcf765ba780e0217e0fbfff56fcf5e318caea0e79a5"
+    },
+    {
+      "path": "2d/setup/sprite-walk/run.py",
+      "bytes": 6307,
+      "sha256": "9a1c6ad041f03992645cbc77bcf3ef1f2ba479de3e526ae49081039db3cdb309"
+    },
+    {
+      "path": "2d/setup/sprite-walk/shoot-v1-api.json",
+      "bytes": 6367,
+      "sha256": "a5d7c80598d09c9ad1562f4d5cc79aa9cb767e2e57b03103dfb3e786bdacb0b3"
+    },
+    {
+      "path": "2d/setup/sprite-walk/shoot-v1-cutouts-api.json",
+      "bytes": 2857,
+      "sha256": "29165f8c8f874a13eb04f9b1a540707c8d2997df405ef776acb5ac1668d8ee3f"
+    },
+    {
+      "path": "2d/setup/sprite-walk/shoot-v1-selection.json",
+      "bytes": 29,
+      "sha256": "5d0b608ef46b9eda31166e891c9a00951c55c48056ae2017d5c3480ecfd98b6d"
+    },
+    {
+      "path": "2d/setup/sprite-walk/shoot-v1-ui.json",
+      "bytes": 18027,
+      "sha256": "c86890294af8f674a64ba921d0cf0a7ad6262fb1274334632260b2ff767c0211"
+    },
+    {
+      "path": "2d/setup/sprite-walk/slash-v1-api.json",
+      "bytes": 6384,
+      "sha256": "65a5e1ba2a146165e7cd33f568ea5055bd0b11a40606f3ac7c10e3cf3ed42a21"
+    },
+    {
+      "path": "2d/setup/sprite-walk/slash-v1-cutouts-api.json",
+      "bytes": 2857,
+      "sha256": "ae8e91390bfd0614f9d9afdea7c13f1387a2ee6e15ed2b3846d3aa6fc1a711e3"
+    },
+    {
+      "path": "2d/setup/sprite-walk/slash-v1-selection.json",
+      "bytes": 30,
+      "sha256": "8f3d4e6aa4ba6ff835144352a8e4115caf35fef9bd2aaf6ca3946a0479101a97"
+    },
+    {
+      "path": "2d/setup/sprite-walk/slash-v1-ui.json",
+      "bytes": 18044,
+      "sha256": "c79d9ee6cdb4603a0ef5e018a634add35b4c3c6c13a61123a9b9b3ac43683f73"
+    },
+    {
+      "path": "2d/setup/sprite-walk/special-v1-api.json",
+      "bytes": 6313,
+      "sha256": "b2bac7ae9dc34022b59731545429a4e025c89173348cfb27770cc00f40377d20"
+    },
+    {
+      "path": "2d/setup/sprite-walk/special-v1-cutouts-api.json",
+      "bytes": 2875,
+      "sha256": "ad0445a94845d67714be982eba6038309937d2a2b0c95991b519a9f21a208fe9"
+    },
+    {
+      "path": "2d/setup/sprite-walk/special-v1-selection.json",
+      "bytes": 29,
+      "sha256": "a1be595dc39b52b9e0bad9300f9de56a41eab722a5fffe61b15cfc2419078ceb"
+    },
+    {
+      "path": "2d/setup/sprite-walk/special-v1-ui.json",
+      "bytes": 17973,
+      "sha256": "da2952e9d9b5a664cb2e7afcda91703f006bd7b794689bca4aee053a8efbf43d"
+    },
+    {
+      "path": "2d/setup/sprite-walk/upstream-loop-template.json",
+      "bytes": 9033,
+      "sha256": "cea79b0b3c40081eb6472d597a08aebc4c65d9ac9ff3c50282ec401115c847b3"
+    },
+    {
+      "path": "2d/setup/sprite-walk/vfx-bolt-v1-api.json",
+      "bytes": 2718,
+      "sha256": "cc2eae866164e03492d0f75361947e5ea1da8092caef30509c84ae9dbb93cae3"
+    },
+    {
+      "path": "2d/setup/sprite-walk/vfx-charge-v1-api.json",
+      "bytes": 2781,
+      "sha256": "0ab917ef808969337e272478aae8481ece120fbdb4e329d0d99227bdf349b99e"
+    },
+    {
+      "path": "2d/setup/sprite-walk/vfx-charged-bolt-v1-api.json",
+      "bytes": 2756,
+      "sha256": "f69fca50b5c2aa7f4b6b3483afcaf4a6b5858ddefc81774375517bbffc4f065e"
+    },
+    {
+      "path": "2d/setup/sprite-walk/vfx-cutin-v1-api.json",
+      "bytes": 3715,
+      "sha256": "16d454a0677c52286d61e4b363e57b3f20bbbfc5cece4d69b6d922e942fe76d7"
+    },
+    {
+      "path": "2d/setup/sprite-walk/vfx-dash-v1-api.json",
+      "bytes": 2785,
+      "sha256": "06c7607b8b8cc301a1498464b91dba014246ed823bd890d6e25d5821615bc644"
+    },
+    {
+      "path": "2d/setup/sprite-walk/vfx-impact-v1-api.json",
+      "bytes": 2711,
+      "sha256": "41762ba5ea4a150f3d64f6a6fb2c631355b6fe62fc9d7afffc1975a582ff8d23"
+    },
+    {
+      "path": "2d/setup/sprite-walk/vfx-slash-v1-api.json",
+      "bytes": 2789,
+      "sha256": "ad748866a290cb6ddb51d6c59a6625a5cc1c4cb5a7c80a5fbf50adfad1331770"
+    },
+    {
+      "path": "2d/setup/sprite-walk/vfx-ultimate-v1-api.json",
+      "bytes": 2837,
+      "sha256": "4317c0696db03a16bb6ad14e8aa490097ee65c2125c01c18a6e0239ac1ee13f2"
+    },
+    {
+      "path": "2d/setup/sprite-walk/wait_then_run.py",
+      "bytes": 720,
+      "sha256": "e3a66bbbec32506412185dad929856c114aa33cde4efd6f6c2d052adf511e86e"
+    },
+    {
+      "path": "2d/setup/sprite-walk/walk-v1-api.json",
+      "bytes": 6302,
+      "sha256": "6f50973a5ebfd1ea540e9077603da4a3ead6419e2af162c10db0095f47505083"
+    },
+    {
+      "path": "2d/setup/sprite-walk/walk-v1-cutouts-api.json",
+      "bytes": 2848,
+      "sha256": "c352c14e30fe2a02f949ff54970f0da5fc710dc3d74bc13cef8152b45625fcb9"
+    },
+    {
+      "path": "2d/setup/sprite-walk/walk-v1-selection.json",
+      "bytes": 27,
+      "sha256": "fd97d64bc03b7ca4015846b67f41ef47ec79234ebdb0af75eb48c7bd648b3d2c"
+    },
+    {
+      "path": "2d/setup/sprite-walk/walk-v1-ui.json",
+      "bytes": 17962,
+      "sha256": "07b25ef12bfa3e841e5c57865c5b5e727aa6bbacc6a2c9c5cb165b2280361dfa"
+    },
+    {
+      "path": "2d/setup/text-edit-api.json",
+      "bytes": 3485,
+      "sha256": "8655065ecd0a2799b10f87a884d913fda0d3bfd1c9a7ca76126bf292910a7c91"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-animation-start.png",
+      "bytes": 193981,
+      "sha256": "8bf7e840dceee8d04b96b7c9d5a0d2ef9b17e62457a07c0787280bff40063752"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-breath-v1-selected-00.png",
+      "bytes": 243112,
+      "sha256": "354bc55ada1a7d5fb90dba1b73a35ff5d174808b33422c6fa03e76b0ed531b6b"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-breath-v1-selected-01.png",
+      "bytes": 233524,
+      "sha256": "b4fbc4d1ece026687717865a77c21c5ab7753dcabd8e2c624d75115da9870f66"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-breath-v1-selected-02.png",
+      "bytes": 238771,
+      "sha256": "cca24d6c0b978a179b8e36f4260b19ca1317ecb7bc072ea3248e8b45f547b601"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-breath-v1-selected-03.png",
+      "bytes": 242783,
+      "sha256": "c226416d6dc6e77f6a6b1fb9644cbbf885091c070528e28ebb24d8956d0fa59f"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-breath-v1-selected-04.png",
+      "bytes": 241319,
+      "sha256": "047cf85f0c4c062e9799cac26f0a0d430d804830ea41548352ad7d9b65500d3c"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-breath-v1-selected-05.png",
+      "bytes": 241242,
+      "sha256": "0e9a8ab0bdb5b1d14201d92603ada90ea74c68a3dd0469baff9a8fb13bc82de6"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-breath-v1-selected-06.png",
+      "bytes": 237896,
+      "sha256": "70f0fdc48ab8efb4088aba81d157d546f101624c6924b049abe0ed2e98c41120"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-breath-v1-selected-07.png",
+      "bytes": 237125,
+      "sha256": "7ee420ceede2fec8adf055a541fd7d59dbb371e6311fa8c880bdd214d10b1eab"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-charge-v1-selected-00.png",
+      "bytes": 241996,
+      "sha256": "df08119fefdf2d1c13e5f0994864d8c9d61605b3676eca01e8151f56df4a1c1c"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-charge-v1-selected-01.png",
+      "bytes": 232097,
+      "sha256": "7b38e915eea1fdb8e35e767015a4971f65af83e66bf7108bce02b542d6bd6e06"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-charge-v1-selected-02.png",
+      "bytes": 237806,
+      "sha256": "986bebed4bfe8b84b27d77ae0815341f38b0a5f4082747b937cd7b757a32ae3c"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-charge-v1-selected-03.png",
+      "bytes": 241155,
+      "sha256": "bc4afcbf89acc2e11d8e9a18eb17f3c8ddfd6057f75f10fe5b580225ac714f11"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-charge-v1-selected-04.png",
+      "bytes": 243786,
+      "sha256": "dd3867c84f6b5495207b7eabaabc6243c9ca853f9f39c0f2b71a66286b4e9c72"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-charge-v1-selected-05.png",
+      "bytes": 253676,
+      "sha256": "2d7d72ea6d77d1648d6ebfdedee9bc61782cb6bcbe65cf403d075b1f8f11bfc1"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-charge-v1-selected-06.png",
+      "bytes": 244801,
+      "sha256": "4e6e5d6dbf3db52ab28f86c39c6663f8b664a9393c6e71a7ee2ac52cd297590e"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-charge-v1-selected-07.png",
+      "bytes": 244345,
+      "sha256": "deb423026e4f379fc1b7e65205bd3a9e5d6c285592278a49f8e310107d54bc7d"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-claw-v1-selected-00.png",
+      "bytes": 242073,
+      "sha256": "3d31e05cb79c325eacbb6e32cd4354d7d5c272342342bb1a2e3883c598793bea"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-claw-v1-selected-01.png",
+      "bytes": 244550,
+      "sha256": "11fde5b98ab65f457c45f9d138e825e33bb8d741ebce12cbd2cf9dc758004624"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-claw-v1-selected-02.png",
+      "bytes": 228995,
+      "sha256": "625ca033a4f0504cbf2749504390ff387b1ee230079e1c2c1d6b84b54e202d31"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-claw-v1-selected-03.png",
+      "bytes": 238629,
+      "sha256": "ccaf2b4db0dbf802a104cd50c015dbe3ba3e50623c13bc317640b41496e71a3d"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-claw-v1-selected-04.png",
+      "bytes": 237169,
+      "sha256": "7cff938f1a2d981cb9b01dd8f2dff8662e2d2d1aec766aa2c4ef1e2d64d203c9"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-claw-v1-selected-05.png",
+      "bytes": 232445,
+      "sha256": "6e072c77ad776f620527957e95bef7333175dc0badfba374f7a5157507093a8e"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-claw-v1-selected-06.png",
+      "bytes": 244251,
+      "sha256": "788fd06ed32be39112f5af6f4d69360cb7ecd243196afdbeebec0df8c2a247f1"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-claw-v1-selected-07.png",
+      "bytes": 241589,
+      "sha256": "c6d1cc9e45f10bac264b36e37987d8d47894239ba4d5f2c923e4f210751ea013"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-death-v1-selected-00.png",
+      "bytes": 243029,
+      "sha256": "16e2bab9418e9a9408eaa68cd19c291301cd80b20ecbed8be11d6abe208a60c4"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-death-v1-selected-01.png",
+      "bytes": 234647,
+      "sha256": "03ac28d8187eda9d79289f440991095ccc73944be495c09009f3742a638bdee9"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-death-v1-selected-02.png",
+      "bytes": 231389,
+      "sha256": "dc1851c5f873c7333d432279fb0b8624f27718131629105d09572369c9a27535"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-death-v1-selected-03.png",
+      "bytes": 226526,
+      "sha256": "4af84b74ac5aef5d13bfb556d690d9e5f90508cfa85d6915b797712af94d6c24"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-death-v1-selected-04.png",
+      "bytes": 215683,
+      "sha256": "dae748521711816a6882b39e33b1dc28b16beb91abf5814fbfa8fab6ab5a6c0b"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-death-v1-selected-05.png",
+      "bytes": 211947,
+      "sha256": "88b45382d2eeb2d635c1eedb08b6b93c2a693883e852ec5e4811bd3244a8bbeb"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-death-v1-selected-06.png",
+      "bytes": 209750,
+      "sha256": "c8b15ab01e041c740b62542688c298328575cf6cda18beb9f0433853fdba7ffb"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-death-v1-selected-07.png",
+      "bytes": 209301,
+      "sha256": "2ed916b712f1477ee0e7d7883838bc03c0cb69598c9dfbb01e91bdda956bf809"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-hurt-v1-selected-00.png",
+      "bytes": 242347,
+      "sha256": "9732245941426aaa5fa7d1d0360e3a066d5cbfec4e73d1eea73d0093e0daedb0"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-hurt-v1-selected-01.png",
+      "bytes": 234950,
+      "sha256": "b7a58f9d3fb1e54a43be5406879ba3e63859dbd711e02a2b1f9ecf56dd21c51f"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-hurt-v1-selected-02.png",
+      "bytes": 236520,
+      "sha256": "bba8faaf4e431cd30f52235c2b27d17a5896d67b1c481b558e882deec8b8ee5e"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-hurt-v1-selected-03.png",
+      "bytes": 230619,
+      "sha256": "7298a2dcce3fb530063aa23062f10601e52eb3d45c7ddd6646b06978ccf7062d"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-hurt-v1-selected-04.png",
+      "bytes": 230829,
+      "sha256": "330d11bf847b60438449a555816d6fe396edc8e637a898d08819ba687c0babe0"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-hurt-v1-selected-05.png",
+      "bytes": 241945,
+      "sha256": "853b0793d48e94644d1ffebe5d6c5f04986c47098ef4b8782c9982e4f3e3566d"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-hurt-v1-selected-06.png",
+      "bytes": 239431,
+      "sha256": "3070c394597c54f284b914524f4a2c36197a00b46ef1a5b19597f86628b5b18b"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-hurt-v1-selected-07.png",
+      "bytes": 237047,
+      "sha256": "d0e053851766242d29cc536f2de68b56dd2a83c935970efabe4ec8a9011e36da"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-idle-v1-selected-00.png",
+      "bytes": 247357,
+      "sha256": "4688ab113ac45bdc0cb5274581a67067449b4de6d0be5189367dd20258f9d7d0"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-idle-v1-selected-01.png",
+      "bytes": 237616,
+      "sha256": "60ffda612d63602582604f9256d0d75941510a32b3987b9c4c28fddfcaff38e7"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-idle-v1-selected-02.png",
+      "bytes": 237800,
+      "sha256": "c507e8784722b6189f9e1b91a99e1667429a6d6d028fff898c023823be58268d"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-idle-v1-selected-03.png",
+      "bytes": 239909,
+      "sha256": "bca94e50c482649c2ced07b31919b6942d84c8cdfe358d46dd0f278b1ae26100"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-idle-v1-selected-04.png",
+      "bytes": 238551,
+      "sha256": "2be124fa74633b3dfe25385091c2b391246fc3d69a656d679fc7ee8853cc9a61"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-idle-v1-selected-05.png",
+      "bytes": 241828,
+      "sha256": "b34c4258d2010a758c6f411c8d2bb18b737834542c11a3fc22159a60bb44eab8"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-idle-v1-selected-06.png",
+      "bytes": 244639,
+      "sha256": "cd263d3906860165b5571c82028da09ba0bb6ce869b00181ecaead0d462fe43d"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-idle-v1-selected-07.png",
+      "bytes": 243825,
+      "sha256": "fd298f17af73916f595b84d456e8dbde8c4e712940115560e65f0a153f515cf1"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-reference.png",
+      "bytes": 195860,
+      "sha256": "00796f89fafdbc816037b6b53a4e961bda3e8439a7ca51a628bc52e425837c0d"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-stomp-v1-selected-00.png",
+      "bytes": 238289,
+      "sha256": "364d7f4d577153c60e3f7548e849c87cc18d798032e672623275cd00f14a3e23"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-stomp-v1-selected-01.png",
+      "bytes": 241471,
+      "sha256": "8b98b52a5083a6f4e9bc494eac2ad8612b63a9bfb727234dabe131efb15f408b"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-stomp-v1-selected-02.png",
+      "bytes": 239640,
+      "sha256": "11ff6965bb7f08ecf622b0330e9d1e1614b9f5cd4dc71854bdd5246faaf55cbd"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-stomp-v1-selected-03.png",
+      "bytes": 237084,
+      "sha256": "295c52121650e89acacd3da27f67c37a0b9bc84f589cf51a9d47f59c925cf1c6"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-stomp-v1-selected-04.png",
+      "bytes": 241465,
+      "sha256": "d2222ada40372fddf77d6f694df92ea7afdc05e592d8e55d66047ae025518f57"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-stomp-v1-selected-05.png",
+      "bytes": 237755,
+      "sha256": "4d0c2cfade851205cea661f39ae007ded148c88403906a3d76118441ca768004"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-stomp-v1-selected-06.png",
+      "bytes": 241018,
+      "sha256": "2ee98cfd9956be975ec25240d88967b0aa49a85c7ad32fa1cf0ed95db96fdd96"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-stomp-v1-selected-07.png",
+      "bytes": 237177,
+      "sha256": "a04f03b001f2a9bcabba57adbc7a328d53e41f38939e86bb3a8838e3b056282b"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-walk-v1-selected-00.png",
+      "bytes": 242671,
+      "sha256": "90384426dc20857ca0686afa335be4eea9c1981d00d4b1d495f7046db5801232"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-walk-v1-selected-01.png",
+      "bytes": 243406,
+      "sha256": "f76e6e799c1678b362954c8861af852881736597c4eaa2faf1ca50ec3123ab42"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-walk-v1-selected-02.png",
+      "bytes": 253659,
+      "sha256": "1f42ed89351399ee73304b0f31821307911823898579604ec7444ceaaa16da50"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-walk-v1-selected-03.png",
+      "bytes": 237921,
+      "sha256": "e1dbf586121c349e82183aeece6ee059a71c070b84ea7916529cc94b57206e2c"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-walk-v1-selected-04.png",
+      "bytes": 235795,
+      "sha256": "ad9efa11242ebc6d6861175981e40de8c2aa964519ca326a96ba127699cb4af3"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-walk-v1-selected-05.png",
+      "bytes": 226964,
+      "sha256": "9a38d6ed273e64fe3107d0547d450cb9b82db61e8f6916528192c39f99fde78f"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-walk-v1-selected-06.png",
+      "bytes": 232272,
+      "sha256": "e3f8e841043a006c7e6fc40a2702237d851c43ca2794408ca3a89b7b560d6cbd"
+    },
+    {
+      "path": "2d/references/sprite-walk/boss-walk-v1-selected-07.png",
+      "bytes": 246336,
+      "sha256": "7feb262cd572c7c798a55c20913b37f44176e8c1c85102b833708f17f3919cc5"
+    },
+    {
+      "path": "2d/references/sprite-walk/crouch-v1-selected-00.png",
+      "bytes": 160314,
+      "sha256": "c44239421d1524add7c8258c5e31968010ea485a153b955fc83a30ba5919b8bf"
+    },
+    {
+      "path": "2d/references/sprite-walk/crouch-v1-selected-01.png",
+      "bytes": 170003,
+      "sha256": "06d1fbc1188db612071828d576569af2ca214be438c692534854a8b288cebc0e"
+    },
+    {
+      "path": "2d/references/sprite-walk/crouch-v1-selected-02.png",
+      "bytes": 160872,
+      "sha256": "329af6d8f7e65aa4629dfe740251b613cb1c0b9fa3d88660556a7a057dcc0c30"
+    },
+    {
+      "path": "2d/references/sprite-walk/crouch-v1-selected-03.png",
+      "bytes": 146700,
+      "sha256": "013bfd44739b3113491b2498de0b8cedd4bc04d7b83ec4285647482171a8ca1d"
+    },
+    {
+      "path": "2d/references/sprite-walk/crouch-v1-selected-04.png",
+      "bytes": 172669,
+      "sha256": "9d899fbc290bea27811b8ff48064c0671bba961e8c17a402ee85ba53ac7126f7"
+    },
+    {
+      "path": "2d/references/sprite-walk/crouch-v1-selected-05.png",
+      "bytes": 176992,
+      "sha256": "6326c7b68f329ce4aca316ec215c12ff8ddf69d56debafc98998bf6a427b16f9"
+    },
+    {
+      "path": "2d/references/sprite-walk/crouch-v1-selected-06.png",
+      "bytes": 180003,
+      "sha256": "afdb2ebbfb9d427281c33a0177e4bbbc9722100c906629b1cd4c9ad68151aad4"
+    },
+    {
+      "path": "2d/references/sprite-walk/crouch-v1-selected-07.png",
+      "bytes": 170799,
+      "sha256": "e9b4e9b24d388510e705a53a363ddd0bed7d80cb8d3524507bf2aa75ed678ec2"
+    },
+    {
+      "path": "2d/references/sprite-walk/crouch-v2-selected-00.png",
+      "bytes": 176554,
+      "sha256": "c8d785f29270c66998183c8e23fdae053f6d76c72d7ed085d87dc691b52d7f36"
+    },
+    {
+      "path": "2d/references/sprite-walk/crouch-v2-selected-01.png",
+      "bytes": 179361,
+      "sha256": "461e58850912e4a7078d3fa4597e3ddca11eee3feb36997f92ebc1a90978ddb2"
+    },
+    {
+      "path": "2d/references/sprite-walk/crouch-v2-selected-02.png",
+      "bytes": 162567,
+      "sha256": "793ff4c937beec75ad7dee5b991a50c9b1165a6171ecb3506489af6acaeb20c1"
+    },
+    {
+      "path": "2d/references/sprite-walk/crouch-v2-selected-03.png",
+      "bytes": 162005,
+      "sha256": "11f04553d75348360f8c2b478f64eaa921de9c1ce623e56436b9a0006716aa51"
+    },
+    {
+      "path": "2d/references/sprite-walk/crouch-v2-selected-04.png",
+      "bytes": 163528,
+      "sha256": "68dd2a791df9eead12a5b16c0bf44c72aad0f1b7d0584d4a5cdbdb62997edb40"
+    },
+    {
+      "path": "2d/references/sprite-walk/crouch-v2-selected-05.png",
+      "bytes": 172883,
+      "sha256": "4c518d9528b6f4a288f188adbbc39e82e74260fb9146fe42d11885ac729ad4a1"
+    },
+    {
+      "path": "2d/references/sprite-walk/crouch-v2-selected-06.png",
+      "bytes": 184442,
+      "sha256": "af2df601a302bdbc456d6bdfbbe4b73fffe3d903bd8aaf9c445c6e64e7acfb09"
+    },
+    {
+      "path": "2d/references/sprite-walk/crouch-v2-selected-07.png",
+      "bytes": 181216,
+      "sha256": "db6d91a3b088d0919e86623ef0123a6568df4e0f1b99f872f9c9f0ce2b3d2993"
+    },
+    {
+      "path": "2d/references/sprite-walk/dash-v1-selected-00.png",
+      "bytes": 178001,
+      "sha256": "e4d18fd490c83ee6964c76ca82643f3c1d48b92192b6e3f8ed27111676817f9c"
+    },
+    {
+      "path": "2d/references/sprite-walk/dash-v1-selected-01.png",
+      "bytes": 186212,
+      "sha256": "f38b5d990c16ba8374917e67a15dab45a9d6ff38ffc7cc74dc6869cb60d481b6"
+    },
+    {
+      "path": "2d/references/sprite-walk/dash-v1-selected-02.png",
+      "bytes": 171655,
+      "sha256": "fc3e636f40ef8a202a47ff2ca30f2a1c66eb78a0c7df41547718a4e273afba7a"
+    },
+    {
+      "path": "2d/references/sprite-walk/dash-v1-selected-03.png",
+      "bytes": 159111,
+      "sha256": "117b7d88e94bdcb5dec0bcf764702184158703b171056e0bd0b2d80fcb925bb6"
+    },
+    {
+      "path": "2d/references/sprite-walk/dash-v1-selected-04.png",
+      "bytes": 164538,
+      "sha256": "5db4790f7a17ed2eebe8cf9da8219f649c6de442429eaa2ca03878ec45fe296d"
+    },
+    {
+      "path": "2d/references/sprite-walk/dash-v1-selected-05.png",
+      "bytes": 170045,
+      "sha256": "f559cc4299b5446b59d6c927876f5d9534e5fa36aae9cb2cb2264fd546c0fbef"
+    },
+    {
+      "path": "2d/references/sprite-walk/dash-v1-selected-06.png",
+      "bytes": 177714,
+      "sha256": "3b7d466e68fa4034c4d7e1a3b8142fbd0f08083790892d44861d325a7e4d1be3"
+    },
+    {
+      "path": "2d/references/sprite-walk/dash-v1-selected-07.png",
+      "bytes": 184103,
+      "sha256": "e5cf505b2bc2cc8295da18b157558b33dd0b0f748d5a92aab5c791db585f1c4d"
+    },
+    {
+      "path": "2d/references/sprite-walk/jump-v2-selected-00.png",
+      "bytes": 188857,
+      "sha256": "eab34bbae3651524158e68a53899cc4344bd54cabd1b60a03d9a4fdba4508e80"
+    },
+    {
+      "path": "2d/references/sprite-walk/jump-v2-selected-01.png",
+      "bytes": 201736,
+      "sha256": "f4d3869ed89cb311f14bc55a1e0c8b4df95e0fcc59acad826d27256d5db41ede"
+    },
+    {
+      "path": "2d/references/sprite-walk/jump-v2-selected-02.png",
+      "bytes": 198330,
+      "sha256": "4183bb248acf4f7ebf77a9e155419ff97911c77fa1d1ae39a4ac6a4bdd6e5c48"
+    },
+    {
+      "path": "2d/references/sprite-walk/jump-v2-selected-03.png",
+      "bytes": 181002,
+      "sha256": "f955c34d7413960f5916e54b89f1a200c6373b69fb648a2a2c436ddf24b9f859"
+    },
+    {
+      "path": "2d/references/sprite-walk/jump-v2-selected-04.png",
+      "bytes": 181748,
+      "sha256": "96282783c60e1e0d4bad16d8b651f9a4c352bd7a53c821104bff2d5cd2374851"
+    },
+    {
+      "path": "2d/references/sprite-walk/jump-v2-selected-05.png",
+      "bytes": 183219,
+      "sha256": "7ad0ebd9f4d1d6df047ad6c79b4440b1ab6e4a977a6f5a30a33b0e0b241bc699"
+    },
+    {
+      "path": "2d/references/sprite-walk/jump-v2-selected-06.png",
+      "bytes": 176619,
+      "sha256": "e8122134b38ae6e587a5c3cd1f6efbe11bdcec388c87bc9a128edac1e711bddd"
+    },
+    {
+      "path": "2d/references/sprite-walk/jump-v2-selected-07.png",
+      "bytes": 169917,
+      "sha256": "0bda7add2b104cee4bfb526fe608d09ec10cd8689faa2791626559380a555da2"
+    },
+    {
+      "path": "2d/references/sprite-walk/punkman-reference.png",
+      "bytes": 1191142,
+      "sha256": "d80a3b3d855d920eec5d0dd7b18e8302709165d0909279bc94b77a8ace497e66"
+    },
+    {
+      "path": "2d/references/sprite-walk/punkman-walk-crop.png",
+      "bytes": 119898,
+      "sha256": "dd84e9df4223c04cf0f052e98079199f0a5f0f196f2aca2f23f628ff7fce6e67"
+    },
+    {
+      "path": "2d/references/sprite-walk/punkman-walk-start.png",
+      "bytes": 98078,
+      "sha256": "f30ad5de484f3dd959f9b871a8008311c71370a56a4a5cf58de80ecfe1e2671b"
+    },
+    {
+      "path": "2d/references/sprite-walk/shoot-v1-selected-00.png",
+      "bytes": 167301,
+      "sha256": "c0209f80916249cbfb9b476bee56fa5a295bbe35571985629aeb65fe89f99999"
+    },
+    {
+      "path": "2d/references/sprite-walk/shoot-v1-selected-01.png",
+      "bytes": 166084,
+      "sha256": "e651912b4ce79d3b3b211257a12a0961fd91dfacfda0b04dac742a89ac9157e2"
+    },
+    {
+      "path": "2d/references/sprite-walk/shoot-v1-selected-02.png",
+      "bytes": 159289,
+      "sha256": "63d402d6677c1c5536f059cbf852a21312be57d515a169bd4d9fe4a5d5421a30"
+    },
+    {
+      "path": "2d/references/sprite-walk/shoot-v1-selected-03.png",
+      "bytes": 177074,
+      "sha256": "ff9064d4ac2ab928e68fedbff2fd9f522462a3536a95fdd7a57a918389c3838b"
+    },
+    {
+      "path": "2d/references/sprite-walk/shoot-v1-selected-04.png",
+      "bytes": 174101,
+      "sha256": "b782366651a9840050833eab36d2d06f52bcdc742f1cb773938a25c038f8194c"
+    },
+    {
+      "path": "2d/references/sprite-walk/shoot-v1-selected-05.png",
+      "bytes": 175754,
+      "sha256": "682f557990a8436d6ea181770fc6398786ae69969112a017c1b00ed5f8ec57ac"
+    },
+    {
+      "path": "2d/references/sprite-walk/shoot-v1-selected-06.png",
+      "bytes": 183626,
+      "sha256": "3aee83605caf3e3406995f3d65aac141743603c93a759fb6130c74f41cb09e20"
+    },
+    {
+      "path": "2d/references/sprite-walk/shoot-v1-selected-07.png",
+      "bytes": 180515,
+      "sha256": "2cdf54b27fd20b56ce0391ab003920996c542acd765507a9a5548239d2af487a"
+    },
+    {
+      "path": "2d/references/sprite-walk/slash-v1-selected-00.png",
+      "bytes": 155018,
+      "sha256": "17ecacbee4a717507bcf323f7a99f5b6344adbdcf49455e8139df7639470c196"
+    },
+    {
+      "path": "2d/references/sprite-walk/slash-v1-selected-01.png",
+      "bytes": 154269,
+      "sha256": "9ee52b861e2f0ea2dee0d52c063fdcceba643cbd5b9d4ac7a68120fa36d5654b"
+    },
+    {
+      "path": "2d/references/sprite-walk/slash-v1-selected-02.png",
+      "bytes": 180538,
+      "sha256": "a88c5a4e8a0c667848eab9654a28e9e930ba440317bb94daca0a238a6380b288"
+    },
+    {
+      "path": "2d/references/sprite-walk/slash-v1-selected-03.png",
+      "bytes": 183220,
+      "sha256": "e857d9b4b916e931c24c6abb626e451cac1898803d7ab736a9ecba39ff1f7696"
+    },
+    {
+      "path": "2d/references/sprite-walk/slash-v1-selected-04.png",
+      "bytes": 177505,
+      "sha256": "3114e5871800a954a9eedaad2c4989a0ebf47c1eaa31a9b38d986fa58147eaf5"
+    },
+    {
+      "path": "2d/references/sprite-walk/slash-v1-selected-05.png",
+      "bytes": 172826,
+      "sha256": "55b292c46ba51efce776879a7e48da0b07f60dd51c8c2db9e71cf507890a7b90"
+    },
+    {
+      "path": "2d/references/sprite-walk/slash-v1-selected-06.png",
+      "bytes": 172015,
+      "sha256": "804800c7acd49199cabd345f230d49b2afed1b5fa01359b77d8203859657f289"
+    },
+    {
+      "path": "2d/references/sprite-walk/slash-v1-selected-07.png",
+      "bytes": 169652,
+      "sha256": "7ed7a9a4e9a99fc85ba5db30b6a0ca4c75b461b65b3eaba0132b27771954c402"
+    },
+    {
+      "path": "2d/references/sprite-walk/special-v1-selected-00.png",
+      "bytes": 170451,
+      "sha256": "af0999cf6fad545863a8faec67b1df9515e5f8af125a3bf88c1cb9c03c9a53f3"
+    },
+    {
+      "path": "2d/references/sprite-walk/special-v1-selected-01.png",
+      "bytes": 184157,
+      "sha256": "6b809930f02c52a4102613c8f1ef783cf1b4ec6303856197efa266489c1f41ac"
+    },
+    {
+      "path": "2d/references/sprite-walk/special-v1-selected-02.png",
+      "bytes": 192733,
+      "sha256": "73a36de595a87bbc977cb324c2b223701851a45d9e786cbf7375a39eba60ffd2"
+    },
+    {
+      "path": "2d/references/sprite-walk/special-v1-selected-03.png",
+      "bytes": 174002,
+      "sha256": "6c7106ddb598c92ce5b3a3c21e5cbb1df2fbccf578bb65551588260f6742d2b0"
+    },
+    {
+      "path": "2d/references/sprite-walk/special-v1-selected-04.png",
+      "bytes": 170673,
+      "sha256": "66d1e8237c2d2b3c7f0e57d897603bf57fc53f83ee2d9afa7de71db635f66a12"
+    },
+    {
+      "path": "2d/references/sprite-walk/special-v1-selected-05.png",
+      "bytes": 175234,
+      "sha256": "8f76b6810fdd96bcb494e04e4d68e4a50f21c4893f231ceb907be03e944c279a"
+    },
+    {
+      "path": "2d/references/sprite-walk/special-v1-selected-06.png",
+      "bytes": 176302,
+      "sha256": "28ac7ba0827e51a4da36aa6ac05f0eb654dda5a58a1f5b4486f40a38accb60ba"
+    },
+    {
+      "path": "2d/references/sprite-walk/special-v1-selected-07.png",
+      "bytes": 167263,
+      "sha256": "ce7089a368234a155751cb8535b18f359205caaa786e37cf7cfdfbd8c64a6f82"
+    },
+    {
+      "path": "2d/references/sprite-walk/walk-v1-selected-00.png",
+      "bytes": 181335,
+      "sha256": "f54471019c5fd303048a9bf3bb884afca3d26ed7edd9b528306d226ef962d721"
+    },
+    {
+      "path": "2d/references/sprite-walk/walk-v1-selected-01.png",
+      "bytes": 198672,
+      "sha256": "b1b8c565f753251b61d032d3d442cf8376281d250cdf0bf7a714f21cc91b25e8"
+    },
+    {
+      "path": "2d/references/sprite-walk/walk-v1-selected-02.png",
+      "bytes": 193365,
+      "sha256": "5ed4075c5fb7306b0e30808e67c8d46450075f3f36fd287349d8fa0e8c7c0533"
+    },
+    {
+      "path": "2d/references/sprite-walk/walk-v1-selected-03.png",
+      "bytes": 189499,
+      "sha256": "b43f17bafc86c03a2c5897c6d982b974d519d73a5ca8933eef11c065928f41e1"
+    },
+    {
+      "path": "2d/references/sprite-walk/walk-v1-selected-04.png",
+      "bytes": 173116,
+      "sha256": "6c02d2a27263c8f2e11741f9bacb14ee8e06724a874a98047c85db833d96a741"
+    },
+    {
+      "path": "2d/references/sprite-walk/walk-v1-selected-05.png",
+      "bytes": 163278,
+      "sha256": "fae329aacc0b2afdcbef0c95b4358ceec1a7764ddcd8a9008e091aa045a12f16"
+    },
+    {
+      "path": "2d/references/sprite-walk/walk-v1-selected-06.png",
+      "bytes": 166079,
+      "sha256": "4ca1d113caf328aa6b38bccace11ac4a9e9e0daad7aeb7928690ddd894b4b924"
+    },
+    {
+      "path": "2d/references/sprite-walk/walk-v1-selected-07.png",
+      "bytes": 170308,
+      "sha256": "482fdfa2d1ff9f5d5769e121780dec1832408767e2efcb0ccbb5aa88e05ee0b7"
+    },
+    {
+      "path": "2d/masters/bolt-master.png",
+      "bytes": 8718,
+      "sha256": "9232be9bd8b08eb43045cf37a883632dbf6f129e2ddee88ea2a1d9977afabf6c"
+    },
+    {
+      "path": "2d/masters/charge-master.png",
+      "bytes": 26211,
+      "sha256": "b5bffb726e3ac941a8ff3be855d93fc6bd17c63629f1364517e211114451d4fb"
+    },
+    {
+      "path": "2d/masters/charged-bolt-master.png",
+      "bytes": 12717,
+      "sha256": "b79d10754c3fb0fe0d8685337d30931135cc5198e239ce87ddc541854b22b547"
+    },
+    {
+      "path": "2d/masters/dash-master.png",
+      "bytes": 8132,
+      "sha256": "f7769b6ba4805aaa7300ecee0ba53a58e1a77ee0c031238be453992ac87f359b"
+    },
+    {
+      "path": "2d/masters/impact-master.png",
+      "bytes": 19702,
+      "sha256": "45a3eb1ebb584aba3550f88024e1b7cab596da85207c6a7b5c9d38ac000db059"
+    },
+    {
+      "path": "2d/masters/slash-master.png",
+      "bytes": 17300,
+      "sha256": "14d2938833a14ce156324fa6d4d02c32d4ea350194ad0503819f5e9b9d5b270f"
+    },
+    {
+      "path": "2d/masters/ultimate-master.png",
+      "bytes": 23319,
+      "sha256": "8f6f967b4c9ff9e2bfbbfe9edaef1252f29b1ed6bd35176b397611aaf779d12f"
+    },
+    {
+      "path": "music/source/compose.py",
+      "bytes": 26419,
+      "sha256": "c4a519f38f9baf5402eb85c23c60726579ea826283b90fc89ec60b6d99f15a1d"
+    },
+    {
+      "path": "music/source/drake-overdrive-score.json",
+      "bytes": 707180,
+      "sha256": "2b6ea412eab84a3cf477971877951f9d6013ec0e75727f13ea4bf44ce9fd7067"
+    },
+    {
+      "path": "music/source/drake-overdrive.mid",
+      "bytes": 21644,
+      "sha256": "6b7629161776e51aa1f8382e5809143ada3388d5378a06318df928ab0f777dd0"
+    },
+    {
+      "path": "music/source/neon-heartbeat-score.json",
+      "bytes": 647202,
+      "sha256": "bae0a6a851371feb1bcac3af0b8fe5bdba8661ea01d2f321fb8bb90a0dbc21da"
+    },
+    {
+      "path": "music/source/neon-heartbeat.mid",
+      "bytes": 19295,
+      "sha256": "30d33559cfa87a6d58841801761d63fdbf3fb91ad9ed51f50b6e72e2b6133477"
+    },
+    {
+      "path": "music/source/package_music.py",
+      "bytes": 1269,
+      "sha256": "5b9fc20533986c75f0e2607c354e6729ae7ccca488bc60b243b19839ed074c24"
+    },
+    {
+      "path": "music/source/verify_music.py",
+      "bytes": 5537,
+      "sha256": "6fa450d8c1c1a6a881d059b31e44cc4c77eaac8a15086d539b97ccf8526a9a14"
+    },
+    {
+      "path": "music/tracks.json",
+      "bytes": 15131,
+      "sha256": "5e7738193e4785aa869a0a89fba4461086421067bf831ad2c8d857e9fcc5b679"
+    }
+  ]
+}

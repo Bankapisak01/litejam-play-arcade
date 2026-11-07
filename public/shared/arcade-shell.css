@@ -1,0 +1,18 @@
+@import url('./tokens.css');
+:root{font-family:var(--lj-font);color-scheme:dark}
+body{font-family:var(--lj-font);background-color:var(--lj-bg)}
+button,input,select{font-family:inherit}button,a{touch-action:manipulation}
+.arcade-brand{display:flex!important;align-items:center;gap:13px!important;letter-spacing:0!important;text-transform:none!important;text-decoration:none;min-width:0}
+.arcade-brand-logo{display:block;width:132px;height:32px;object-fit:contain;image-rendering:pixelated;flex-shrink:0}
+.arcade-brand-copy{display:flex;flex-direction:column;gap:4px;font-size:11px;font-weight:600;line-height:1.25;color:var(--lj-muted)}
+.arcade-brand-copy strong{font-family:var(--lj-pixel);font-size:14px;font-weight:600;color:var(--lj-text)}
+.arcade-brand-copy small,.arcade-brand-copy .brand-sub{font-size:9px;font-weight:500;letter-spacing:1.4px;color:var(--lj-lime)}
+.arcade-game-nav{display:inline-flex!important;align-items:center;justify-content:center;gap:7px;min-height:38px;padding:9px 13px;border:1px solid var(--lj-line);border-radius:5px;font:500 12px var(--lj-pixel);color:var(--lj-text);background:#ffffff04;text-decoration:none;white-space:nowrap;transition:background .18s,border-color .18s}
+.arcade-game-nav:hover{background:#d5ff6210;border-color:var(--lj-lime);color:var(--lj-lime)}
+.arcade-game-nav:focus-visible{outline:3px solid var(--lj-lime);outline-offset:4px}
+h1,h2,.primary,.primary-button,.scoreboard strong,.session-stats strong,.result-main strong,.rank,.mini-keys kbd,.lane-buttons button{font-family:var(--lj-pixel)}
+.primary,.primary-button{background:var(--lj-lime);color:#14190c;font-size:17px;letter-spacing:.1px;box-shadow:0 3px 0 #71883a}
+.primary:hover:enabled,.primary-button:hover:enabled{background:#e5ff99}
+@media(max-width:720px){.arcade-brand{gap:9px!important}.arcade-brand-logo{width:100px;height:28px}.arcade-brand-copy{font-size:9px}.arcade-brand-copy strong{font-size:11px}.arcade-brand-copy small,.arcade-brand-copy .brand-sub{font-size:8px}.arcade-game-nav{font-size:11px;padding:8px;min-height:36px}}
+@media(max-width:440px){.arcade-brand-logo{width:86px;height:25px}.arcade-brand-copy{max-width:115px}.arcade-game-nav{padding:7px;font-size:10px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}}

@@ -1,0 +1,18 @@
+{
+  "name": "litejam-play-arcade",
+  "version": "0.1.4",
+  "private": true,
+  "description": "LiteJam Play: Arcade \u2014 three local keyboard games",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node scripts/launcher.mjs start --foreground --no-open",
+    "stop": "node scripts/launcher.mjs stop",
+    "test": "node scripts/test.mjs",
+    "build": "node scripts/build.mjs",
+    "package": "node scripts/package.mjs",
+    "relocatable": "node scripts/relocatable.mjs"
+  }
+}

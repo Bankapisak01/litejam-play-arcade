@@ -1,0 +1,192 @@
+{
+  "1": {
+    "class_type": "LoadBackgroundRemovalModel",
+    "inputs": {
+      "bg_removal_name": "birefnet.safetensors"
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "boss-stomp-v1-selected-00.png"
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "boss-stomp-v1-selected-01.png"
+    }
+  },
+  "12": {
+    "class_type": "ImageBatch",
+    "inputs": {
+      "image1": [
+        "10",
+        0
+      ],
+      "image2": [
+        "11",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "boss-stomp-v1-selected-02.png"
+    }
+  },
+  "14": {
+    "class_type": "ImageBatch",
+    "inputs": {
+      "image1": [
+        "12",
+        0
+      ],
+      "image2": [
+        "13",
+        0
+      ]
+    }
+  },
+  "15": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "boss-stomp-v1-selected-03.png"
+    }
+  },
+  "16": {
+    "class_type": "ImageBatch",
+    "inputs": {
+      "image1": [
+        "14",
+        0
+      ],
+      "image2": [
+        "15",
+        0
+      ]
+    }
+  },
+  "17": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "boss-stomp-v1-selected-04.png"
+    }
+  },
+  "18": {
+    "class_type": "ImageBatch",
+    "inputs": {
+      "image1": [
+        "16",
+        0
+      ],
+      "image2": [
+        "17",
+        0
+      ]
+    }
+  },
+  "19": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "boss-stomp-v1-selected-05.png"
+    }
+  },
+  "20": {
+    "class_type": "ImageBatch",
+    "inputs": {
+      "image1": [
+        "18",
+        0
+      ],
+      "image2": [
+        "19",
+        0
+      ]
+    }
+  },
+  "21": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "boss-stomp-v1-selected-06.png"
+    }
+  },
+  "22": {
+    "class_type": "ImageBatch",
+    "inputs": {
+      "image1": [
+        "20",
+        0
+      ],
+      "image2": [
+        "21",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "boss-stomp-v1-selected-07.png"
+    }
+  },
+  "24": {
+    "class_type": "ImageBatch",
+    "inputs": {
+      "image1": [
+        "22",
+        0
+      ],
+      "image2": [
+        "23",
+        0
+      ]
+    }
+  },
+  "100": {
+    "class_type": "RemoveBackground",
+    "inputs": {
+      "bg_removal_model": [
+        "1",
+        0
+      ],
+      "image": [
+        "24",
+        0
+      ]
+    }
+  },
+  "101": {
+    "class_type": "InvertMask",
+    "inputs": {
+      "mask": [
+        "100",
+        0
+      ]
+    }
+  },
+  "102": {
+    "class_type": "JoinImageWithAlpha",
+    "inputs": {
+      "image": [
+        "24",
+        0
+      ],
+      "alpha": [
+        "101",
+        0
+      ]
+    }
+  },
+  "103": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "102",
+        0
+      ],
+      "filename_prefix": "boss-stomp-v1/cutouts/frame"
+    }
+  }
+}

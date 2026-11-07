@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,interactive-widget=resizes-content">
+  <meta name="theme-color" content="#100e22">
+  <title>LiteJam Play: Arcade — Key Battle × Scale Flow (demo)</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css?v=immersive1">
+  <link rel="stylesheet" href="/shared/arcade-shell.css">
+  <link rel="stylesheet" href="/shared/play-shell.css">
+  <link rel="stylesheet" href="scale-flow.css?v=flow3">
+  <script src="/shared/arcade-shell.js" defer></script>
+</head>
+<body class="play-page key-battle-page scale-flow-page">
+  <div class="shell">
+    <header class="play-header">
+      <a class="brand arcade-brand" href="/" aria-label="LiteJam Play: Arcade home"><img class="arcade-brand-logo" src="/assets/brand/litejam.png" alt="LiteJam"><span class="arcade-brand-copy">LiteJam Play: Arcade<span class="brand-sub">KEY BATTLE × SCALE FLOW</span></span></a>
+      <div class="play-header-actions"><span class="demo-tag">DEMO</span><a class="arcade-game-nav" href="index.html">← Key Battle</a><button id="pause" class="play-icon-button" aria-haspopup="dialog" aria-controls="session-menu">Menu <kbd>Esc</kbd></button></div>
+    </header>
+    <main class="layout">
+      <section class="game-card" aria-label="Scale flow arena">
+        <div class="arena-toolbar"><span><i class="live-dot"></i> <b id="arena-mode">FLOW BATTLE</b></span><span id="scale-label">C MAJOR · R 5TH STRING · FULL · 80 BPM</span></div>
+        <div id="encounter-route" class="encounter-route" aria-label="Flow progress"><span data-stage="1" class="current"><b>01</b>UP&amp;DOWN · 80</span><i>›</i><span data-stage="2"><b>02</b>THIRDS↑ · 90</span><i>›</i><span data-stage="3"><b>03</b>DOWN&amp;UP · 100</span></div>
+        <div class="arena">
+          <canvas id="scene" width="960" height="390" aria-label="Punkman battles Synth Drake"></canvas>
+          <div class="battle-hud">
+            <div class="player-hud"><span class="hud-name">PUNKMAN</span><div id="hearts" class="hearts" aria-label="Full health">♥ ♥ ♥ ♥ ♥</div><div class="energy-line"><span>OVERDRIVE</span><span id="energy-label">0%</span></div><div class="energy-track"><i id="energy-fill"></i></div></div>
+            <div class="boss-hud"><div class="boss-label"><span id="phase-tag">PHASE 01</span><b>SYNTH DRAKE</b></div><div class="boss-track" role="progressbar" aria-label="Boss health" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"><i id="boss-fill"></i></div><span id="boss-hp">100 / 100</span></div>
+          </div>
+          <div id="battle-callout" class="battle-callout" aria-live="polite"></div>
+          <div class="scene-caption"><span id="scene-caption-left">01 / UP &amp; DOWN · ROUND 1/3</span><span id="scene-caption-right">ONE NOTE PER BEAT. STAY IN THE FLOW.</span></div>
+          <div id="start-overlay" class="arena-overlay"><div class="entry-card"><p class="overline">SCALE FLOW · PUNKMAN VS. SYNTH DRAKE</p><h1>Scale Flow</h1><p id="session-summary">Flow battle · C Major · R 5th string · Full · Flow set · 80 BPM</p><button id="start" class="primary" disabled>Loading characters…</button><button id="setup" class="entry-setup" aria-haspopup="dialog" aria-controls="session-menu">Choose scale &amp; tempo ↗</button></div></div>
+        </div>
+        <div class="flow-panel typing-panel" id="typing-panel">
+          <div class="flow-top typing-top"><span id="prompt-label">TYPE THE NOTE NAME ON THE BEAT</span><span id="direction-tag" class="direction-tag">▲ ASCENDING</span><span class="combo" id="combo">0 <small>STREAK</small></span></div>
+          <div class="flow-main">
+            <div class="neck-wrap"><canvas id="neck" width="960" height="210" aria-label="Fretboard showing the scale positions"></canvas></div>
+            <div class="flow-side">
+              <div id="word-stream" class="word-stream note-stream" aria-hidden="true"><span class="current-word">c</span><span class="upcoming">d</span></div>
+              <div class="beat-meter"><div class="word-risk-line"><span id="word-risk">Count-in · 4 beats</span><strong id="word-clock">Beat</strong></div><div class="word-time-track"><i id="word-time-fill"></i></div></div>
+              <label for="typing-input">TYPE HERE <span>A–G · S OR # FOR SHARP</span></label>
+              <input id="typing-input" type="text" inputmode="text" enterkeyhint="next" lang="en" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" disabled placeholder="Start a session, then type the notes…" aria-describedby="typing-hint target-accessible" maxlength="4">
+              <span id="target-accessible" class="sr-only" aria-live="polite">Next note</span>
+              <div class="typing-footer"><span id="typing-hint">Letters a–g · S or # for a sharp · Backspace to correct</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="session-stats"><div><span>SCORE</span><strong id="score">0</strong></div><div><span>TIMING</span><strong id="timing">—<small>%</small></strong></div><div><span>NOTES</span><strong id="notes">0<small>/30</small></strong></div><div><span id="clock-label">TIME LEFT</span><strong id="clock">—</strong></div></div>
+      </section>
+    </main>
+  </div>
+  <dialog id="session-menu" class="play-menu" aria-labelledby="menu-title" aria-describedby="menu-description">
+    <div class="play-menu-top"><div><p class="play-kicker">KEY BATTLE × SCALE FLOW / SESSION</p><h2 id="menu-title">Scale setup</h2><p id="menu-description" class="play-menu-description">Pick a scale exactly like the app's Scale flow tab, then play it one note per beat.</p></div><button id="menu-close" class="play-menu-close" aria-label="Close session menu">×</button></div>
+    <div class="play-menu-grid">
+      <section class="play-menu-section setup-card"><h3>Choose your session</h3>
+        <div class="mode-picker" role="group" aria-label="Choose a mode"><button data-mode="practice" class="mode-option" aria-pressed="false"><span class="mode-icon">◇</span><span><b>Practice · notes wait</b><small>No beat · each note waits for you · 2.5 s pace</small></span><i></i></button><button data-mode="battle" class="mode-option selected" aria-pressed="true"><span class="mode-icon">ϟ</span><span><b>Flow battle</b><small>One note per beat · timing scored</small></span><i></i></button></div>
+        <div class="setup-grid">
+          <div><label for="root">ROOT</label><select id="root"></select></div>
+          <div><label for="scale-type">SCALE</label><select id="scale-type"></select></div>
+        </div>
+        <label>PLAY POSITION</label><div class="seg" role="group" aria-label="Play position"><button data-position="r5" class="seg-option selected" aria-pressed="true">R 5th string</button><button data-position="r6" class="seg-option" aria-pressed="false">R 6th string</button></div>
+        <label>OCTAVE</label><div class="seg" role="group" aria-label="Octave"><button data-octave="lower" class="seg-option" aria-pressed="false">1</button><button data-octave="higher" class="seg-option" aria-pressed="false">2</button><button data-octave="full" class="seg-option selected" aria-pressed="true">Full</button></div>
+        <label>FLOW LENGTH</label><div class="seg routine-seg" role="group" aria-label="Flow length"><button data-routine="single" class="seg-option" aria-pressed="false">Single<small>1 round · 1 pattern</small></button><button data-routine="set" class="seg-option selected" aria-pressed="true">Flow set<small>3 rounds · ≈1 min</small></button><button data-routine="marathon" class="seg-option" aria-pressed="false">Marathon<small>5 rounds · ≈2 min</small></button></div>
+        <label for="bpm">START TEMPO <strong id="bpm-value">80 BPM</strong></label><input id="bpm" type="range" min="50" max="160" step="5" value="80">
+        <p id="lesson-note" class="muted">3 rounds · 86 notes · Up &amp; Down → Thirds ↑ → Down &amp; Up · 80→100 BPM · about 1:06</p>
+        <p id="settings-note" class="settings-note" hidden>End this session to change the scale or tempo.</p>
+        <div class="record"><span>YOUR BEST</span><strong id="best">—</strong><span id="best-detail">Set your first personal best for this scale</span></div>
+      </section>
+      <section class="play-menu-section how-card"><h3>Notes into power</h3><p id="start-description">Count-in 4 beats → one note per beat → 3 rounds change the pattern and the tempo (80→100 BPM)</p><ol class="how-list"><li><span class="how-symbol cyan">♩</span><div><b>One note per beat</b><p>The ring around the note drains to its beat and the clock counts down the flow. PERFECT ±90 ms · GREAT ±160 ms · GOOD ±240 ms</p></div></li><li><span class="how-symbol pink">●</span><div><b>Root notes are danger notes</b><p>The red LED positions: miss one and Drake's ultimate costs −2 ♥</p></div></li><li><span class="how-symbol gold">↕</span><div><b>One scale, many rounds</b><p>Up &amp; down, thirds, down &amp; up, scramble: each round re-orders the same position and may push the tempo +10 BPM. A round with no miss heals +1 ♥</p></div></li></ol><div class="tip"><span>TYPE IT LIKE YOU PLAY IT</span><p id="mode-tip">Naturals are one key (c d e f g a b). Sharps add S or #: F# = <kbd>f</kbd><kbd>s</kbd>. Backspace fixes a slip — the beat does not wait.</p></div><p id="start-note" class="menu-note">Late or wrong −1 ♥ · Root note −2 ♥ · Score 0–100,000</p><dl class="play-control-list"><div><dt>Correct a typo</dt><dd><kbd>Backspace</kbd></dd></div><div><dt>Pause / resume</dt><dd><kbd>Esc</kbd></dd></div></dl></section>
+      <section class="play-menu-section preferences-card"><h3>Make it yours</h3><div class="preferences-row"><button id="sound" class="menu-setting" aria-pressed="true">Sound: On</button><button id="motion" class="menu-setting" aria-pressed="true">Effects: On</button><button id="led" class="menu-setting" aria-pressed="true">LED guide: On</button><button id="guide" class="menu-setting" aria-pressed="true">Note guide: On</button><button id="auto" class="menu-setting" aria-pressed="false">Auto run: Off</button></div><p class="muted small">LED guide lights the whole position on the neck like the app's LED mode. Turn it off to play from memory (×1.25 XP, like the app). Note guide plays each note at its real pitch on its beat, so you hear the scale while you type it. Auto run types the scale for you so you can watch every effect; auto runs are not saved.</p></section>
+    </div>
+    <div class="play-menu-actions"><button id="menu-start" class="primary" disabled>Loading characters…</button><button id="resume" class="primary" hidden>Resume flow →</button><button id="finish" class="secondary" disabled hidden>End session &amp; review</button><a href="index.html">Back to Key Battle</a></div>
+  </dialog>
+  <dialog id="results" aria-labelledby="result-title"><div class="result-body"><span class="overline" id="result-kicker">FLOW COMPLETE</span><h2 id="result-title">In the flow.</h2><p id="result-description"></p><div class="result-metrics"><div><strong id="result-score">0</strong><span>SCORE</span></div><div><strong id="result-timing">—</strong><span>TIMING</span></div><div><strong id="result-streak">0</strong><span>BEST STREAK</span></div></div><div class="grade-row" id="grade-row"></div><div class="result-details" id="result-details"></div><div class="round-list" id="round-list" hidden></div><div class="review"><span>XP &amp; NEXT PRACTICE</span><p id="result-review"></p></div><div class="result-actions"><button id="again" class="primary">Play again →</button><button id="change-session" class="secondary">Change scale / tempo</button></div></div></dialog>
+  <script src="scale-flow-data.js?v=flow3"></script><script src="scale-flow-engine.js?v=flow3"></script><script src="vfx.js?v=rounds2"></script><script src="scene.js?v=rounds2"></script><script src="scale-flow.js?v=flow3"></script>
+</body>
+</html>

@@ -1,0 +1,2571 @@
+{
+  "version": 1,
+  "song_id": "drake-overdrive",
+  "difficulty": "normal",
+  "bpm": 144,
+  "meter": [
+    4,
+    4
+  ],
+  "audio": "../audio/drake-overdrive.wav",
+  "audio_offset_seconds": 0,
+  "lanes": [
+    "D",
+    "F",
+    "J",
+    "K"
+  ],
+  "music_duration_seconds": 80.0,
+  "notes": [
+    {
+      "time": 3.333333,
+      "beat": 8,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "intro",
+      "pitch": 72,
+      "accent": false
+    },
+    {
+      "time": 3.75,
+      "beat": 9,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "intro",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 4.166667,
+      "beat": 10,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "intro",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 4.583333,
+      "beat": 11,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "intro",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 5.0,
+      "beat": 12,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "intro",
+      "pitch": 69,
+      "accent": false
+    },
+    {
+      "time": 5.416667,
+      "beat": 13,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "intro",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 5.833333,
+      "beat": 14,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "intro",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 6.25,
+      "beat": 15,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "intro",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 6.666667,
+      "beat": 16,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 6.979167,
+      "beat": 16.75,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 7.291667,
+      "beat": 17.5,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 7.5,
+      "beat": 18,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 7.8125,
+      "beat": 18.75,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 8.125,
+      "beat": 19.5,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 8.333333,
+      "beat": 20,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 8.645833,
+      "beat": 20.75,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 8.958333,
+      "beat": 21.5,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 70,
+      "accent": false
+    },
+    {
+      "time": 9.166667,
+      "beat": 22,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 9.479167,
+      "beat": 22.75,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 9.791667,
+      "beat": 23.5,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 10.0,
+      "beat": 24,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 10.3125,
+      "beat": 24.75,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 10.625,
+      "beat": 25.5,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 72,
+      "accent": false
+    },
+    {
+      "time": 10.833333,
+      "beat": 26,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 11.145833,
+      "beat": 26.75,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 82,
+      "accent": false
+    },
+    {
+      "time": 11.458333,
+      "beat": 27.5,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 11.666667,
+      "beat": 28,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 11.979167,
+      "beat": 28.75,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 12.291667,
+      "beat": 29.5,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 73,
+      "accent": false
+    },
+    {
+      "time": 12.5,
+      "beat": 30,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 12.8125,
+      "beat": 30.75,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 13.125,
+      "beat": 31.5,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 13.333333,
+      "beat": 32,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 13.645833,
+      "beat": 32.75,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 13.958333,
+      "beat": 33.5,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 14.166667,
+      "beat": 34,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 14.479167,
+      "beat": 34.75,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 14.791667,
+      "beat": 35.5,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 15.0,
+      "beat": 36,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 15.3125,
+      "beat": 36.75,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 15.625,
+      "beat": 37.5,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 70,
+      "accent": false
+    },
+    {
+      "time": 15.833333,
+      "beat": 38,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 16.145833,
+      "beat": 38.75,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 16.458333,
+      "beat": 39.5,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 16.666667,
+      "beat": 40,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 16.979167,
+      "beat": 40.75,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 17.291667,
+      "beat": 41.5,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 72,
+      "accent": false
+    },
+    {
+      "time": 17.5,
+      "beat": 42,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 17.8125,
+      "beat": 42.75,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 82,
+      "accent": false
+    },
+    {
+      "time": 18.125,
+      "beat": 43.5,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 18.333333,
+      "beat": 44,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 18.645833,
+      "beat": 44.75,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 18.958333,
+      "beat": 45.5,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 73,
+      "accent": false
+    },
+    {
+      "time": 19.166667,
+      "beat": 46,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 19.479167,
+      "beat": 46.75,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 19.791667,
+      "beat": 47.5,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "verse",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 20.0,
+      "beat": 48,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": null,
+      "accent": false,
+      "source": "power-chord"
+    },
+    {
+      "time": 20.0,
+      "beat": 48,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 86,
+      "accent": true
+    },
+    {
+      "time": 20.416667,
+      "beat": 49,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 20.625,
+      "beat": 49.5,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 20.833333,
+      "beat": 50,
+      "lane": 0,
+      "type": "hold",
+      "duration": 0.6375,
+      "section": "chorus",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 21.666667,
+      "beat": 52,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 21.875,
+      "beat": 52.5,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 82,
+      "accent": false
+    },
+    {
+      "time": 22.083333,
+      "beat": 53,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 22.5,
+      "beat": 54,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 22.708333,
+      "beat": 54.5,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 82,
+      "accent": false
+    },
+    {
+      "time": 22.916667,
+      "beat": 55,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 23.333333,
+      "beat": 56,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 79,
+      "accent": true
+    },
+    {
+      "time": 23.333333,
+      "beat": 56,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": null,
+      "accent": false,
+      "source": "power-chord"
+    },
+    {
+      "time": 23.541667,
+      "beat": 56.5,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 23.75,
+      "beat": 57,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 88,
+      "accent": false
+    },
+    {
+      "time": 24.166667,
+      "beat": 58,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 24.375,
+      "beat": 58.5,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 24.583333,
+      "beat": 59,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 25.0,
+      "beat": 60,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 85,
+      "accent": false
+    },
+    {
+      "time": 25.208333,
+      "beat": 60.5,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 25.416667,
+      "beat": 61,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 25.833333,
+      "beat": 62,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 26.041667,
+      "beat": 62.5,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 26.25,
+      "beat": 63,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 73,
+      "accent": false
+    },
+    {
+      "time": 26.666667,
+      "beat": 64,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": null,
+      "accent": false,
+      "source": "power-chord"
+    },
+    {
+      "time": 26.666667,
+      "beat": 64,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 86,
+      "accent": true
+    },
+    {
+      "time": 27.083333,
+      "beat": 65,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 27.291667,
+      "beat": 65.5,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 27.5,
+      "beat": 66,
+      "lane": 0,
+      "type": "hold",
+      "duration": 0.6375,
+      "section": "chorus",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 28.333333,
+      "beat": 68,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 28.541667,
+      "beat": 68.5,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 82,
+      "accent": false
+    },
+    {
+      "time": 28.75,
+      "beat": 69,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 29.166667,
+      "beat": 70,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 29.375,
+      "beat": 70.5,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 82,
+      "accent": false
+    },
+    {
+      "time": 29.583333,
+      "beat": 71,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 30.0,
+      "beat": 72,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 79,
+      "accent": true
+    },
+    {
+      "time": 30.0,
+      "beat": 72,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": null,
+      "accent": false,
+      "source": "power-chord"
+    },
+    {
+      "time": 30.208333,
+      "beat": 72.5,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 30.416667,
+      "beat": 73,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 88,
+      "accent": false
+    },
+    {
+      "time": 30.833333,
+      "beat": 74,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 31.041667,
+      "beat": 74.5,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 31.25,
+      "beat": 75,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 31.666667,
+      "beat": 76,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 85,
+      "accent": false
+    },
+    {
+      "time": 31.875,
+      "beat": 76.5,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 32.083333,
+      "beat": 77,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 32.5,
+      "beat": 78,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 32.708333,
+      "beat": 78.5,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 32.916667,
+      "beat": 79,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "chorus",
+      "pitch": 73,
+      "accent": false
+    },
+    {
+      "time": 33.333333,
+      "beat": 80,
+      "lane": 0,
+      "type": "hold",
+      "duration": 0.6375,
+      "section": "break",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 34.166667,
+      "beat": 82,
+      "lane": 3,
+      "type": "hold",
+      "duration": 0.6375,
+      "section": "break",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 35.0,
+      "beat": 84,
+      "lane": 0,
+      "type": "hold",
+      "duration": 0.6375,
+      "section": "break",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 35.833333,
+      "beat": 86,
+      "lane": 0,
+      "type": "hold",
+      "duration": 0.6375,
+      "section": "break",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 36.666667,
+      "beat": 88,
+      "lane": 0,
+      "type": "hold",
+      "duration": 0.6375,
+      "section": "break",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 37.5,
+      "beat": 90,
+      "lane": 0,
+      "type": "hold",
+      "duration": 0.6375,
+      "section": "break",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 38.333333,
+      "beat": 92,
+      "lane": 1,
+      "type": "hold",
+      "duration": 0.6375,
+      "section": "break",
+      "pitch": 73,
+      "accent": false
+    },
+    {
+      "time": 39.166667,
+      "beat": 94,
+      "lane": 0,
+      "type": "hold",
+      "duration": 0.6375,
+      "section": "break",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 40.0,
+      "beat": 96.0,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 40.208333,
+      "beat": 96.5,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 40.416667,
+      "beat": 97.0,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 40.625,
+      "beat": 97.5,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 40.833333,
+      "beat": 98.0,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 41.041667,
+      "beat": 98.5,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 41.25,
+      "beat": 99.0,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 41.458333,
+      "beat": 99.5,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 41.666667,
+      "beat": 100.0,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 41.875,
+      "beat": 100.5,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 82,
+      "accent": false
+    },
+    {
+      "time": 42.083333,
+      "beat": 101.0,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 42.291667,
+      "beat": 101.5,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 42.5,
+      "beat": 102.0,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 42.708333,
+      "beat": 102.5,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 42.916667,
+      "beat": 103,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 43.333333,
+      "beat": 104.0,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 43.541667,
+      "beat": 104.5,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 43.75,
+      "beat": 105.0,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 43.958333,
+      "beat": 105.5,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 44.166667,
+      "beat": 106.0,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 44.375,
+      "beat": 106.5,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 44.583333,
+      "beat": 107.0,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 44.791667,
+      "beat": 107.5,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 45.0,
+      "beat": 108,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 69,
+      "accent": false
+    },
+    {
+      "time": 45.833333,
+      "beat": 110,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 46.041667,
+      "beat": 110.5,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 72,
+      "accent": false
+    },
+    {
+      "time": 46.25,
+      "beat": 111,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 69,
+      "accent": false
+    },
+    {
+      "time": 46.666667,
+      "beat": 112.0,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 46.875,
+      "beat": 112.5,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 47.083333,
+      "beat": 113.0,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 82,
+      "accent": false
+    },
+    {
+      "time": 47.291667,
+      "beat": 113.5,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 47.5,
+      "beat": 114.0,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 47.708333,
+      "beat": 114.5,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 47.916667,
+      "beat": 115.0,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 82,
+      "accent": false
+    },
+    {
+      "time": 48.125,
+      "beat": 115.5,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 48.333333,
+      "beat": 116.0,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 48.541667,
+      "beat": 116.5,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 82,
+      "accent": false
+    },
+    {
+      "time": 48.75,
+      "beat": 117.0,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 48.958333,
+      "beat": 117.5,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 49.166667,
+      "beat": 118.0,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 49.375,
+      "beat": 118.5,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 49.583333,
+      "beat": 119,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 50.0,
+      "beat": 120.0,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 50.208333,
+      "beat": 120.5,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 50.416667,
+      "beat": 121.0,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 82,
+      "accent": false
+    },
+    {
+      "time": 50.625,
+      "beat": 121.5,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 50.833333,
+      "beat": 122.0,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 51.041667,
+      "beat": 122.5,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 51.25,
+      "beat": 123.0,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 82,
+      "accent": false
+    },
+    {
+      "time": 51.458333,
+      "beat": 123.5,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 51.666667,
+      "beat": 124,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 69,
+      "accent": false
+    },
+    {
+      "time": 52.5,
+      "beat": 126,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 52.708333,
+      "beat": 126.5,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 72,
+      "accent": false
+    },
+    {
+      "time": 52.916667,
+      "beat": 127,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "solo",
+      "pitch": 69,
+      "accent": false
+    },
+    {
+      "time": 53.333333,
+      "beat": 128,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": null,
+      "accent": false,
+      "source": "power-chord"
+    },
+    {
+      "time": 53.333333,
+      "beat": 128,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 86,
+      "accent": true
+    },
+    {
+      "time": 53.75,
+      "beat": 129,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 53.958333,
+      "beat": 129.5,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 54.166667,
+      "beat": 130,
+      "lane": 0,
+      "type": "hold",
+      "duration": 0.6375,
+      "section": "final",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 55.0,
+      "beat": 132,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 55.208333,
+      "beat": 132.5,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 82,
+      "accent": false
+    },
+    {
+      "time": 55.416667,
+      "beat": 133,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 55.833333,
+      "beat": 134,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 56.041667,
+      "beat": 134.5,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 82,
+      "accent": false
+    },
+    {
+      "time": 56.25,
+      "beat": 135,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 56.666667,
+      "beat": 136,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 79,
+      "accent": true
+    },
+    {
+      "time": 56.666667,
+      "beat": 136,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": null,
+      "accent": false,
+      "source": "power-chord"
+    },
+    {
+      "time": 56.875,
+      "beat": 136.5,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 57.083333,
+      "beat": 137,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 88,
+      "accent": false
+    },
+    {
+      "time": 57.5,
+      "beat": 138,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 57.708333,
+      "beat": 138.5,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 57.916667,
+      "beat": 139,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 58.333333,
+      "beat": 140,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 85,
+      "accent": false
+    },
+    {
+      "time": 58.541667,
+      "beat": 140.5,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 58.75,
+      "beat": 141,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 59.166667,
+      "beat": 142,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 59.375,
+      "beat": 142.5,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 59.583333,
+      "beat": 143,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 73,
+      "accent": false
+    },
+    {
+      "time": 60.0,
+      "beat": 144,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": null,
+      "accent": false,
+      "source": "power-chord"
+    },
+    {
+      "time": 60.0,
+      "beat": 144,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 86,
+      "accent": true
+    },
+    {
+      "time": 60.416667,
+      "beat": 145,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 60.625,
+      "beat": 145.5,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 60.833333,
+      "beat": 146,
+      "lane": 0,
+      "type": "hold",
+      "duration": 0.6375,
+      "section": "final",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 61.666667,
+      "beat": 148,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 61.875,
+      "beat": 148.5,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 82,
+      "accent": false
+    },
+    {
+      "time": 62.083333,
+      "beat": 149,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 62.5,
+      "beat": 150,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 62.708333,
+      "beat": 150.5,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 82,
+      "accent": false
+    },
+    {
+      "time": 62.916667,
+      "beat": 151,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 63.333333,
+      "beat": 152,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 79,
+      "accent": true
+    },
+    {
+      "time": 63.333333,
+      "beat": 152,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": null,
+      "accent": false,
+      "source": "power-chord"
+    },
+    {
+      "time": 63.541667,
+      "beat": 152.5,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 63.75,
+      "beat": 153,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 88,
+      "accent": false
+    },
+    {
+      "time": 64.166667,
+      "beat": 154,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 64.375,
+      "beat": 154.5,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 64.583333,
+      "beat": 155,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 65.0,
+      "beat": 156,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 85,
+      "accent": false
+    },
+    {
+      "time": 65.208333,
+      "beat": 156.5,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 65.416667,
+      "beat": 157,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 65.833333,
+      "beat": 158,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 66.041667,
+      "beat": 158.5,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 66.25,
+      "beat": 159,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 73,
+      "accent": false
+    },
+    {
+      "time": 66.666667,
+      "beat": 160,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": null,
+      "accent": false,
+      "source": "power-chord"
+    },
+    {
+      "time": 66.666667,
+      "beat": 160,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 86,
+      "accent": true
+    },
+    {
+      "time": 67.083333,
+      "beat": 161,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 67.291667,
+      "beat": 161.5,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 67.5,
+      "beat": 162,
+      "lane": 0,
+      "type": "hold",
+      "duration": 0.6375,
+      "section": "final",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 68.333333,
+      "beat": 164,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 68.541667,
+      "beat": 164.5,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 82,
+      "accent": false
+    },
+    {
+      "time": 68.75,
+      "beat": 165,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 69.166667,
+      "beat": 166,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 69.375,
+      "beat": 166.5,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 82,
+      "accent": false
+    },
+    {
+      "time": 69.583333,
+      "beat": 167,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 70.0,
+      "beat": 168,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 79,
+      "accent": true
+    },
+    {
+      "time": 70.0,
+      "beat": 168,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": null,
+      "accent": false,
+      "source": "power-chord"
+    },
+    {
+      "time": 70.208333,
+      "beat": 168.5,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 70.416667,
+      "beat": 169,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 88,
+      "accent": false
+    },
+    {
+      "time": 70.833333,
+      "beat": 170,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 71.041667,
+      "beat": 170.5,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 71.25,
+      "beat": 171,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 71.666667,
+      "beat": 172,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 85,
+      "accent": false
+    },
+    {
+      "time": 71.875,
+      "beat": 172.5,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 83,
+      "accent": false
+    },
+    {
+      "time": 72.083333,
+      "beat": 173,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 72.5,
+      "beat": 174,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 72.708333,
+      "beat": 174.5,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 76,
+      "accent": false
+    },
+    {
+      "time": 72.916667,
+      "beat": 175,
+      "lane": 1,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "final",
+      "pitch": 73,
+      "accent": false
+    },
+    {
+      "time": 73.333333,
+      "beat": 176,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "outro",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 73.75,
+      "beat": 177,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "outro",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 73.958333,
+      "beat": 177.5,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "outro",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 74.166667,
+      "beat": 178,
+      "lane": 0,
+      "type": "hold",
+      "duration": 0.6375,
+      "section": "outro",
+      "pitch": 74,
+      "accent": false
+    },
+    {
+      "time": 75.0,
+      "beat": 180,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "outro",
+      "pitch": 77,
+      "accent": false
+    },
+    {
+      "time": 75.208333,
+      "beat": 180.5,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "outro",
+      "pitch": 82,
+      "accent": false
+    },
+    {
+      "time": 75.416667,
+      "beat": 181,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "outro",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 75.833333,
+      "beat": 182,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "outro",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 76.041667,
+      "beat": 182.5,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "outro",
+      "pitch": 82,
+      "accent": false
+    },
+    {
+      "time": 76.25,
+      "beat": 183,
+      "lane": 3,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "outro",
+      "pitch": 81,
+      "accent": false
+    },
+    {
+      "time": 76.666667,
+      "beat": 184,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "outro",
+      "pitch": 79,
+      "accent": false
+    },
+    {
+      "time": 76.875,
+      "beat": 184.5,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "outro",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 77.083333,
+      "beat": 185,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "outro",
+      "pitch": 88,
+      "accent": false
+    },
+    {
+      "time": 77.5,
+      "beat": 186,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "outro",
+      "pitch": 86,
+      "accent": false
+    },
+    {
+      "time": 77.708333,
+      "beat": 186.5,
+      "lane": 2,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "outro",
+      "pitch": 84,
+      "accent": false
+    },
+    {
+      "time": 77.916667,
+      "beat": 187,
+      "lane": 0,
+      "type": "tap",
+      "duration": 0.0,
+      "section": "outro",
+      "pitch": 79,
+      "accent": false
+    }
+  ]
+}

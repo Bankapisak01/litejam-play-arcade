@@ -1,0 +1,30 @@
+/* Key Battle × Scale Flow demo — additions on top of Key Battle's style.css. */
+.demo-tag{font:10px var(--lj-pixel);letter-spacing:1.5px;color:#17200b;background:var(--lj-lime);padding:3px 7px;margin-right:4px}
+.flow-panel{padding:8px 18px 8px}
+.flow-top{gap:14px}.direction-tag{color:var(--gold);letter-spacing:1px;white-space:nowrap}
+.flow-main{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(300px,1fr);gap:22px;align-items:stretch}
+.neck-wrap{position:relative;min-width:0;background:#120c1a;border:1px solid #4d3a5c;box-shadow:inset 0 0 40px #0006}
+.neck-wrap canvas{display:block;width:100%;height:100%;aspect-ratio:960/210;image-rendering:auto}
+.flow-side{display:flex;flex-direction:column;justify-content:center;min-width:0}
+.note-stream{min-height:56px;gap:18px}.note-stream .current-word{font-size:40px;text-transform:uppercase;letter-spacing:1px}
+.note-stream .upcoming{font-size:20px;text-transform:uppercase}.note-stream .upcoming small,.note-stream .current-word small{font:10px var(--lj-pixel);color:#8d7aa0;margin-left:5px;text-transform:none;letter-spacing:0}
+.note-stream .is-root{color:#ff8fb5}
+.beat-meter{margin:2px 0 8px}
+.flow-side>label{display:flex;justify-content:space-between;gap:8px;margin:0 0 6px;color:#c8b6d4;font:10px var(--lj-pixel);letter-spacing:.6px}.flow-side>label span{color:var(--cyan)}
+.grade-perfect{color:var(--lj-lime)!important}.grade-great{color:var(--cyan)!important}.grade-good{color:var(--gold)!important}.grade-miss{color:#ff8fb5!important}
+.setup-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:10px;margin-bottom:12px}.setup-grid label{font:10px var(--lj-pixel);letter-spacing:.8px;color:#c7b6d2;display:block;margin-bottom:6px}
+.setup-card select{width:100%;height:36px;background:#191321;color:var(--text);border:1px solid #634871;padding:0 8px}
+.setup-card>label{font:10px var(--lj-pixel);letter-spacing:.8px;color:#c7b6d2;display:flex;justify-content:space-between;margin:10px 0 6px}.setup-card>label strong{color:var(--lj-lime)}
+.seg{display:flex;gap:6px}.seg-option{flex:1;padding:8px 6px;border:1px solid #634871;background:#191321;font:12px var(--lj-pixel);color:#cdb9dd}.seg-option.selected{border-color:#a6c85b;background:#272f1c;color:var(--lj-lime)}
+#bpm{width:100%;accent-color:var(--lj-lime);margin:2px 0 8px}
+.muted.small{font-size:11px;color:#bda6cc;margin:10px 0 0}
+.grade-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:16px}.grade-row div{text-align:center;border:1px solid var(--line);padding:8px 4px;background:#1f1730}.grade-row strong{display:block;font:22px var(--lj-pixel)}.grade-row span{font:9px var(--lj-pixel);letter-spacing:1px;color:var(--muted)}
+.pb-badge{display:inline-block;font:10px var(--lj-pixel);letter-spacing:1px;color:#17200b;background:var(--lj-lime);padding:2px 6px;margin-left:8px;vertical-align:middle}
+.session-stats>div:first-child strong{color:var(--lj-lime)}
+@media(max-width:1000px){.flow-main{grid-template-columns:minmax(0,1.3fr) minmax(260px,1fr);gap:14px}.note-stream .current-word{font-size:34px}}
+@media(max-width:700px){.flow-main{grid-template-columns:1fr;gap:8px}.neck-wrap canvas{aspect-ratio:960/210}.note-stream{min-height:44px}.note-stream .current-word{font-size:30px}.direction-tag{display:none}.demo-tag{display:none}.setup-grid{grid-template-columns:1fr}}
+/* Rounds: flow length picker, route and per-round results */
+.routine-seg .seg-option{display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 4px;line-height:1.2}.seg-option small{font:9px var(--lj-pixel);letter-spacing:0;color:#9c87ad;white-space:nowrap}.seg-option.selected small{color:#b9d57a}
+.encounter-route span b{margin-right:5px}
+.round-list{display:grid;gap:4px;margin-top:12px;font:11px var(--lj-pixel);letter-spacing:.5px;color:#c7b6d2}.round-list div{display:grid;grid-template-columns:28px 1fr auto 52px;gap:10px;align-items:center;padding:6px 10px;border:1px solid var(--line);background:#1f1730}.round-list b{color:var(--lj-lime);font-weight:400}.round-list strong{color:#f5f0ff;font-weight:400}.round-list em{font-style:normal;text-align:right;color:var(--cyan)}
+@media(max-width:700px){.routine-seg .seg-option small{display:none}.round-list div{grid-template-columns:24px 1fr auto 44px;gap:6px;padding:5px 8px;font-size:10px}}

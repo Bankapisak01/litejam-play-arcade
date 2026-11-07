@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#100c17">
+  <meta name="description" content="LiteJam Play: Arcade — Neon Relay × Scale Flow. Run the rooftops along six neon strings and strum the scale on the beat.">
+  <title>LiteJam Play: Arcade — Neon Relay × Scale Flow (demo)</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/shared/arcade-shell.css">
+  <link rel="stylesheet" href="/shared/play-shell.css">
+  <link rel="stylesheet" href="scale-flow.css?v=run2">
+  <script src="/shared/arcade-shell.js" defer></script>
+</head>
+<body class="play-page neon-play scale-run-page">
+  <header class="play-header">
+    <a href="/" class="arcade-brand" aria-label="LiteJam Play: Arcade home"><img class="arcade-brand-logo" src="/assets/brand/litejam.png" alt="LiteJam"><span class="arcade-brand-copy">LiteJam Play: Arcade<span class="brand-sub">NEON RELAY × SCALE FLOW</span></span></a>
+    <div class="play-header-actions"><span class="demo-tag">DEMO</span><a class="arcade-game-nav" href="index.html">← Neon Relay</a><button class="play-icon-button" id="pause" aria-haspopup="dialog" aria-controls="pause-menu">Menu <kbd>ESC</kbd></button></div>
+  </header>
+  <main class="play-layout">
+    <section class="game-panel" aria-label="Neon Relay Scale Run">
+      <div class="game-top"><span><b class="live-square"></b> SCALE RUN <span class="dim">/</span> <span id="scale-label">C MAJOR · R 5TH STRING · FULL · FLOW SET · 80 BPM</span></span><span class="game-actions"><button id="fullscreen-pause" class="fullscreen-menu" aria-haspopup="dialog" aria-controls="pause-menu">Menu / Pause</button></span></div>
+      <div class="viewport" id="viewport">
+        <canvas id="game" width="960" height="540" tabindex="0" aria-label="Scale Run game area. W or Up: hop to a higher string. S or Down: hop to a lower string. J, X or Space: strum the note on its beat. Escape: menu and pause.">Your browser does not support Canvas.</canvas>
+        <div class="overlay" id="overlay">
+          <div class="overlay-inner"><span class="mission-label" id="overlay-label">NEON RELAY × SCALE FLOW / PUNKMAN VS. SYNTH DRAKE</span><h1 id="overlay-title">RUN THE<br><span>SCALE.</span></h1><p id="overlay-description">Six strings, six rails. Type each note's name on the beat — Punkman hops to its string and strums.</p><p id="session-summary" class="session-summary">Flow battle · C Major · R 5th string · Full · Flow set · 80 BPM</p><button class="primary" id="start" disabled>Loading characters… <span>↗</span></button><button id="setup" class="entry-setup" aria-haspopup="dialog" aria-controls="pause-menu">Choose scale &amp; tempo ↗</button><p class="start-hint" id="start-hint">W S hop · J X SPACE strum · ENTER to start · Auto run in Menu</p></div>
+        </div>
+        <div class="notification" id="notification" role="status" aria-live="polite"></div>
+      </div>
+      <div class="game-bottom"><span><span class="cyan-dot"></span><span id="status">Ready to run</span></span><span class="quick-hint">W S <span>HOP STRING</span><b>·</b> J X SPACE <span>STRUM</span><b>·</b> ESC <span>MENU</span></span></div>
+      <div class="touch-controls" aria-label="Touch controls"><div><button data-action="up" aria-label="Hop to a higher string">↑</button><button data-action="down" aria-label="Hop to a lower string">↓</button></div><div><button data-action="strum" class="shoot-touch" aria-label="Strum the note">STRUM</button></div></div>
+      <p class="rotate-hint">Turn your phone sideways for a wider view.</p>
+      <dialog class="play-menu" id="pause-menu" aria-labelledby="menu-title" aria-describedby="menu-description">
+        <div class="play-menu-top"><div><p class="play-kicker">NEON RELAY × SCALE FLOW / SESSION</p><h2 id="menu-title">Scale setup</h2><p class="play-menu-description" id="menu-description">Pick a scale like the app's Scale flow tab, then run it: one note per beat, string by string.</p></div><button id="menu-close" class="play-menu-close" aria-label="Close menu">×</button></div>
+        <div class="play-menu-grid">
+          <section class="play-menu-section setup-card"><h3>Choose your session</h3>
+            <div class="mode-picker" role="group" aria-label="Choose a mode"><button data-mode="practice" class="mode-option" aria-pressed="false"><span class="mode-icon">◇</span><span><b>Practice · notes wait</b><small>No beat · each note waits for you · 2.5 s pace</small></span></button><button data-mode="battle" class="mode-option selected" aria-pressed="true"><span class="mode-icon">ϟ</span><span><b>Flow battle</b><small>One note per beat · timing scored</small></span></button></div>
+            <div class="setup-grid"><div><label for="root">ROOT</label><select id="root"></select></div><div><label for="scale-type">SCALE</label><select id="scale-type"></select></div></div>
+            <label>PLAY POSITION</label><div class="seg" role="group" aria-label="Play position"><button data-position="r5" class="seg-option selected" aria-pressed="true">R 5th string</button><button data-position="r6" class="seg-option" aria-pressed="false">R 6th string</button></div>
+            <label>OCTAVE</label><div class="seg" role="group" aria-label="Octave"><button data-octave="lower" class="seg-option" aria-pressed="false">1</button><button data-octave="higher" class="seg-option" aria-pressed="false">2</button><button data-octave="full" class="seg-option selected" aria-pressed="true">Full</button></div>
+            <label>FLOW LENGTH</label><div class="seg routine-seg" role="group" aria-label="Flow length"><button data-routine="single" class="seg-option" aria-pressed="false">Single<small>1 round · 1 pattern</small></button><button data-routine="set" class="seg-option selected" aria-pressed="true">Flow set<small>3 rounds · ≈1 min</small></button><button data-routine="marathon" class="seg-option" aria-pressed="false">Marathon<small>5 rounds · ≈2 min</small></button></div>
+            <label for="bpm">START TEMPO <strong id="bpm-value">80 BPM</strong></label><input id="bpm" type="range" min="50" max="160" step="5" value="80">
+            <p id="lesson-note" class="menu-note">3 rounds · 86 notes · Up &amp; Down → Thirds ↑ → Down &amp; Up · 80→100 BPM · about 1:06</p>
+            <p id="settings-note" class="menu-note" hidden>End this session to change the scale or tempo.</p>
+            <div class="record"><span>YOUR BEST</span><strong id="best">—</strong><span id="best-detail">Set your first personal best for this scale</span></div>
+          </section>
+          <section class="play-menu-section"><h3>Take control</h3><dl class="play-control-list"><div><dt>Type the note</dt><dd><kbd>A</kbd>–<kbd>G</kbd> · <kbd>S</kbd> / <kbd>#</kbd> sharp · <kbd>⌫</kbd></dd></div><div><dt>Hop up a string</dt><dd><kbd>W</kbd> / <kbd>↑</kbd></dd></div><div><dt>Hop down a string</dt><dd><kbd>S</kbd> / <kbd>↓</kbd></dd></div><div><dt>Strum the note</dt><dd><kbd>J</kbd> / <kbd>X</kbd> / <kbd>SPACE</kbd></dd></div><div><dt>Pause / resume</dt><dd><kbd>P</kbd> / <kbd>ESC</kbd></dd></div></dl>
+            <p class="menu-note" id="start-description">Count-in 4 beats → hop to the note's string → strum as the LED reaches Punkman. 3 rounds change the pattern and the tempo (80→100 BPM).</p>
+            <p class="menu-note">PERFECT ±90 ms · GREAT ±160 ms · GOOD ±240 ms. Late, early or the wrong string −1 ♥ · a root note (pink LED) −2 ♥ · a round with no miss heals +1 ♥.</p>
+            <h3 class="mission-heading">Make it yours</h3><div class="preferences-row"><button id="sound" class="menu-setting" aria-pressed="true">Sound: On</button><button id="guide" class="menu-setting" aria-pressed="true">Note guide: On</button><button id="motion" class="menu-setting" aria-pressed="true">Effects: On</button><button id="auto" class="menu-setting" aria-pressed="false">Auto run: Off</button><button id="keys" class="menu-setting" aria-pressed="true">Keys: Note names</button></div><p class="menu-note">Note guide plays each note at its real pitch on its beat, so you hear the scale while you run it. Auto run lets Punkman play the scale himself so you can watch every effect; auto runs are not saved. Keys switches between typing the note names (A–G, S or # for a sharp) and hopping strings with W/S then strumming with J, X or Space.</p>
+          </section>
+        </div>
+        <div class="play-menu-actions"><button class="primary" id="menu-start" disabled>Loading characters…</button><button class="primary" id="menu-resume" hidden>Resume run →</button><button class="secondary" id="finish" disabled hidden>End session &amp; review</button><a class="menu-arcade-link" href="index.html">Back to Neon Relay ↗</a></div>
+      </dialog>
+      <dialog class="play-menu results-dialog" id="results" aria-labelledby="result-title">
+        <div class="result-body"><span class="play-kicker" id="result-kicker">FLOW COMPLETE</span><h2 id="result-title">In the flow.</h2><p id="result-description" class="play-menu-description"></p>
+          <div class="result-metrics"><div><strong id="result-score">0</strong><span>SCORE</span></div><div><strong id="result-timing">—</strong><span>TIMING</span></div><div><strong id="result-streak">0</strong><span>BEST STREAK</span></div></div>
+          <div class="grade-row" id="grade-row"></div><div class="result-details" id="result-details"></div><div class="round-list" id="round-list" hidden></div>
+          <div class="review"><span>XP &amp; NEXT PRACTICE</span><p id="result-review"></p></div>
+          <div class="play-menu-actions"><button id="again" class="primary">Play again →</button><button id="change-session" class="secondary">Change scale / tempo</button></div>
+        </div>
+      </dialog>
+    </section>
+  </main>
+  <script src="vfx.js"></script><script src="boss.js"></script><script src="scale-flow-data.js?v=run2"></script><script src="scale-flow-engine.js?v=run2"></script><script src="scale-run-rules.js?v=run2"></script><script src="scale-flow.js?v=run2"></script>
+</body>
+</html>
